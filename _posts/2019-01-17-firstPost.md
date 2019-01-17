@@ -1,5 +1,6 @@
 ---
 layout: post
+title: First Post
 author: Q
 ---
 This is my first post! It is about bananas...

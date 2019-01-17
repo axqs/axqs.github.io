@@ -1,5 +1,6 @@
 ---
 layout: post
+title: Second Post
 author: Q
 ---
 This is my second post! It is about apples...
