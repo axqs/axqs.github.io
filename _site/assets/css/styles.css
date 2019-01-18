@@ -15,6 +15,28 @@ header.nav-bar {
 div.body {
   font-size: 13px; }
 
+* {
+  box-sizing: border-box; }
+
+div.gallery img {
+  width: 100%;
+  height: auto; }
+
+div.gallery:hover {
+  opacity: 0.75; }
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%; }
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: auto; } }
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%; } }
 h1 {
   clear: right;
   font-family: sans-serif;
@@ -44,7 +66,7 @@ a.current {
   float: right;
   font-family: monospace;
   color: white;
-  padding: 8px 20px;
+  padding: 8px 3%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -57,7 +79,7 @@ a.nav:link, a.nav:visited {
   background-color: white;
   color: black;
   border: 2px solid slategrey;
-  padding: 8px 20px;
+  padding: 8px 3%;
   text-align: center;
   text-decoration: none; }
 
@@ -85,6 +107,7 @@ a.staff:hover, a.staff:active {
   cursor: pointer; }
 
 footer {
+  clear: both;
   border-top: 4px solid midnightblue;
   padding-top: 10px; }
 

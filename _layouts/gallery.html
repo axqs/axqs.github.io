@@ -11,11 +11,12 @@
     </header>
     {{ content }}
     {% for image in site.data.photos %}
-      <div class="gallery">
-        <a href="{{ image.link }}">
-          <img src="{{ image.link }}" alt="{{ image.title }}">
-        </a>
-        <!-- <div class="desc">Add a description of the image here</div> -->
+      <div class="responsive">
+        <div class="gallery">
+          <a href="{{ image.path }}">
+            <img src="{{ image.path }}" alt="{{ image.title }}">
+          </a>
+        </div>
       </div>
     {% endfor %}
 
