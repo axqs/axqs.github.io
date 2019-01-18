@@ -2,12 +2,12 @@
 layout: default
 ---
 <h1>{{ page.name }}</h1>
-<h2>{{ page.position }}</h2>
+<h3>{{ page.position }}</h3>
 
 {{ content }}
 
-<h2>Posts</h2>
-<ul>
+<h3>Posts</h3>
+<ul class="blog">
 	{% assign filtered_posts = site.posts | where: 'author', page.short_name %}
 	{% for post in filtered_posts %}
 		<li><a class="post" href="{{ post.url }}">{{ post.title }}</a></li>

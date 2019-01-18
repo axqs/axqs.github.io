@@ -9,10 +9,12 @@
     <header class="nav-bar">
       {% include navigation.html %}
     </header>
-    {{ content }}
+    <div class="body">
+      {{ content }}
+    </div>
     <footer>
       {% for item in site.data.footer %}
-    		<a class="footer" href="{{ item.link }}">
+    		<a class="footer" href="{{ item.link }}" target="_blank">
     			{{ item.name }}
     		</a>
     	{% endfor %}

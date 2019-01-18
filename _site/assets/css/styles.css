@@ -1,5 +1,9 @@
 html {
-  background-color: whitesmoke; }
+  background-color: whitesmoke;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%; }
 
 header.nav-bar {
   background-color: silver;
@@ -8,28 +12,32 @@ header.nav-bar {
   padding-left: 10px;
   padding-right: 10px; }
 
+div.body {
+  font-size: 13px; }
+
 h1 {
   clear: right;
   font-family: sans-serif;
-  padding-left: 10px;
   border-bottom: 4px solid midnightblue;
   padding-bottom: 10px; }
 
 h2, h3, h4, h5, h6 {
-  font-family: sans-serif;
-  padding-left: 10px; }
+  font-family: sans-serif; }
 
 p {
-  padding-left: 10px;
-  font-family: monospace; }
+  font-family: monospace;
+  font-size: 13px; }
 
 ul.staff {
+  padding-left: 20px;
   list-style-type: none; }
 
 ul.staff li {
+  padding-left: 10px;
   border-left: 5px double firebrick; }
 
 ul.blog {
+  font-size: 15px;
   list-style-type: square; }
 
 a.current {
@@ -78,11 +86,11 @@ a.staff:hover, a.staff:active {
 
 footer {
   border-top: 4px solid midnightblue;
-  padding: 10px; }
+  padding-top: 10px; }
 
 a.footer:link, a.footer:visited {
   font-size: 15px;
-  padding: 5px 5px;
+  padding-right: 10px;
   font-family: sans-serif;
   font-weight: bold;
   color: plum;
