@@ -5,4 +5,4 @@ author: Q
 ---
 This post contains a photo of the Jekyll logo!
 
-![Jekyll logo](/assets/jekyll-logo.png)
+![Jekyll logo](/assets/photos/jekyll-logo.png)
