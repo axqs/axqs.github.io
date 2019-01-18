@@ -1,26 +1,39 @@
+html {
+	background-color: whitesmoke;
+}
+header.nav-bar {
+	background-color: silver;
+	padding-bottom: 44px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 h1 {
 	clear: right;
 	font-family: sans-serif;
-	//background-color: gainsboro;
 	padding-left: 10px;
+	border-bottom: 4px solid midnightblue;
+	padding-bottom: 10px;
 }
-
-h2, h3 {
+h2, h3, h4, h5, h6 {
 	font-family: sans-serif;
 	padding-left: 10px;
 }
-
 p {
 	padding-left: 10px;
 	font-family: monospace;
 }
 
-header.nav-bar {
-	background-color: darkgrey;
-	padding-bottom: 44px;
-	padding-top: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
+ul.staff {
+	list-style-type: none;
+}
+ul.staff li{
+	border-left: 5px double firebrick;
+}
+
+ul.blog {
+	list-style-type: square;
 }
 
 a.current {
@@ -31,8 +44,8 @@ a.current {
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	background-color: navy;
-	border: 2px solid navy;
+	background-color: slategrey;
+	border: 2px solid slategrey;
 }
 
 a.nav:link, a.nav:visited {
@@ -40,11 +53,10 @@ a.nav:link, a.nav:visited {
 	font-family: monospace;
 	background-color: white;
 	color: black;
-	border: 2px solid navy;
+	border: 2px solid slategrey;
 	padding: 8px 20px;
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;
 }
 a.nav:hover, a.nav:active {
 	background-color: black;
@@ -72,20 +84,20 @@ a.staff:hover, a.staff:active {
 	cursor: pointer;
 }
 
+footer {
+	//border-radius: 20px;
+	border-top: 4px solid midnightblue;
+	padding: 10px;
+}
 a.footer:link, a.footer:visited {
+	font-size: 15px;
 	padding: 5px 5px;
 	font-family: sans-serif;
 	font-weight: bold;
-	color: grey;
+	color: plum;
 	text-decoration: none;
 }
 a.footer:hover, a.footer:active {
-	color: darkgrey;
+	color: thistle;
 	cursor: pointer;
-}
-
-footer {
-	border-radius: 20px;
-	border-top: 2px solid navy;
-	padding: 10px 10px;
 }
