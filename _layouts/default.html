@@ -6,7 +6,16 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
-    {% include navigation.html %}
+    <header class="nav-bar">
+      {% include navigation.html %}
+    </header>
     {{ content }}
+    <footer>
+      {% for item in site.data.footer %}
+    		<a class="footer" href="{{ item.link }}">
+    			{{ item.name }}
+    		</a>
+    	{% endfor %}
+    </footer>
   </body>
 </html>

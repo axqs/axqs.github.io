@@ -1,2 +1,80 @@
-.current {
-  color: green; }
+h1 {
+  clear: right;
+  font-family: sans-serif;
+  padding-left: 10px; }
+
+h2, h3 {
+  font-family: sans-serif;
+  padding-left: 10px; }
+
+p {
+  padding-left: 10px;
+  font-family: monospace; }
+
+header.nav-bar {
+  background-color: darkgrey;
+  padding-bottom: 44px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+a.current {
+  float: right;
+  font-family: monospace;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: navy;
+  border: 2px solid navy; }
+
+a.nav:link, a.nav:visited {
+  float: right;
+  font-family: monospace;
+  background-color: white;
+  color: black;
+  border: 2px solid navy;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block; }
+
+a.nav:hover, a.nav:active {
+  background-color: black;
+  border: 2px solid black;
+  color: white; }
+
+a.post:link, a.post:visited {
+  font-family: sans-serif;
+  color: dimgrey;
+  text-decoration: none; }
+
+a.post:hover, a.post:active {
+  color: darkred;
+  cursor: pointer; }
+
+a.staff:link, a.staff:visited {
+  font-family: sans-serif;
+  color: darkgreen;
+  text-decoration: none; }
+
+a.staff:hover, a.staff:active {
+  color: goldenrod;
+  cursor: pointer; }
+
+a.footer:link, a.footer:visited {
+  padding: 5px 5px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: grey;
+  text-decoration: none; }
+
+a.footer:hover, a.footer:active {
+  color: darkgrey;
+  cursor: pointer; }
+
+footer {
+  border-radius: 20px;
+  border-top: 2px solid navy;
+  padding: 10px 10px; }
