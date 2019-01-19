@@ -1,8 +1,15 @@
 collections:
   authors:
     output: true
+  photos:
+    output: true
 
 defaults:
+  - scope:
+      path: ""
+      type: "photos"
+    values:
+      layout: "photo"
   - scope:
       path: ""
       type: "authors"
@@ -17,3 +24,8 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+plugins:
+  - jekyll-gist
+  - jekyll-coffeescript
+  - jekyll-assets

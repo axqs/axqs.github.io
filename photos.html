@@ -1,5 +1,16 @@
 ---
-layout: gallery
+layout: default
 title: Photo Gallery
 ---
 <h1>Photo Gallery</h1>
+
+{% assign shuffled = site.photos | shuffle %}
+{% for image in shuffled %}
+  <div class="responsive">
+    <div class="gallery">
+      <a href="{{ image.url }}">
+        <img src="/assets/photos/{{ image.imgPath }}" alt="{{ image.alt }}">
+      </a>
+    </div>
+  </div>
+{% endfor %}

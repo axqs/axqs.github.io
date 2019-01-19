@@ -13,3 +13,11 @@ layout: default
 		<li><a class="post" href="{{ post.url }}">{{ post.title }}</a></li>
 	{% endfor %}
 </ul>
+
+<h3>Photos</h3>
+<ul>
+	{% assign filtered_posts = site.photos | where: 'author', page.short_name %}
+	{% for post in filtered_posts %}
+		<li><a class="post" href="{{ post.url }}">{{ post.title }}</a></li>
+	{% endfor %}
+</ul>

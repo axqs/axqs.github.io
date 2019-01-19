@@ -1,5 +1,5 @@
-#- name: Staff
-#  link: /staff.html
+- name: Staff
+  link: /staff.html
 - name: Photo Gallery
   link: /photos.html
 - name: Blog
