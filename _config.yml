@@ -3,11 +3,18 @@ collections:
     output: true
   photos:
     output: true
+  topphotos:
+    output: true
 
 defaults:
   - scope:
       path: ""
       type: "photos"
+    values:
+      layout: "photo"
+  - scope:
+      path: ""
+      type: "topphotos"
     values:
       layout: "photo"
   - scope:

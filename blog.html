@@ -9,6 +9,7 @@ title: Blog
 	{% for photo in sorted_photos limit:5 %}
 		<li>
       <h3><a class="post" href="{{ photo.url }}">{{ photo.title }}</a></h3>
+      <!-- <img class="img-post" src="/assets/photos/{{ photo.imgPath }}""> -->
       <p>{{ photo.excerpt }}</p>
     </li>
 	{% endfor %}

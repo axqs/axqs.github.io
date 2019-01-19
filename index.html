@@ -3,13 +3,24 @@ layout: default
 title: Home
 ---
 <h1>Q's Photography</h1>
-{% assign sorted_photos = site.photos | sort:'number' | reverse %}
-{% for image in sorted_photos limit:10 %}
-  <div class="responsive">
-    <div class="gallery">
-      <a href="{{ image.url }}">
-        <img src="/assets/photos/{{ image.imgPath }}" alt="{{ image.alt }}">
-      </a>
+{% assign shuffled = site.topphotos | shuffle %}
+<div class="row">
+  {% assign len = shuffled.size %}
+  {% assign cols = 1 %}
+  {% assign lines = shuffled.size | divided_by:cols %}
+
+  {% assign start = 0 %}
+  {% for i in (0..lines) %}
+    <div class="column">
+      {% assign offset = start | plus:cols | minus:1 %}
+      {% if offset >= len %}
+        {% assign offset = len | minus:1 %}
+      {% endif %}
+      {% for k in (start..offset) %}
+        <a href="{{ shuffled[k].url }}">
+        <img src="/assets/photos/{{ shuffled[k].imgPath }}" alt="{{ shuffled[k].alt }}" style="width:100%"></a>
+      {% endfor %}
     </div>
-  </div>
-{% endfor %}
+    {% assign start = start | plus:cols %}
+  {% endfor %}
+</div>

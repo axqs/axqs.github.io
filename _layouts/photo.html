@@ -5,7 +5,7 @@ layout: default
 {% assign author = site.authors | where: 'short_name', page.author | first %}
 <p>{{ page.date-taken }} - <a class="staff" style="font-family: monospace; font-size: 13px;" href="{{ author.url }}">{{ author.name }}</a></p>
 
-<img src="/assets/photos/{{ page.imgPath }}" alt="{{ page.alt }}">
+<img class="one-photo" src="/assets/photos/{{ page.imgPath }}" alt="{{ page.alt }}">
 
 {{ content }}
 

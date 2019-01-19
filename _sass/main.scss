@@ -13,44 +13,50 @@ header.nav-bar {
 	padding-right: 10px;
 }
 
-img {
+img.one-photo {
   display: block;
   margin: auto;
   padding-bottom: 2%;
-  width: 60%;
+  width: 70%;
 }
-
 div.photo-meta {
   font-family: monospace;
   text-align: right;
   padding-bottom: 1.5%;
 }
+
 * {
 	box-sizing: border-box;
 }
-div.gallery img {
-	width: 100%;
-	height: auto;
+div.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  padding-bottom: 3%;
 }
-div.gallery:hover {
-	opacity: 0.75;
+div.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
 }
-.responsive {
-	padding: 0 6px;
-	float: left;
-	width: 24.99999%;
+div.column img {
+  margin-top: 8px;
+  vertical-align: middle;
 }
-
-@media only screen and (max-width: 700px){
-	.responsive {
-		width: 49.99999%;
-		margin: auto;
-	}
+div.column img:hover {
+	opacity: 0.60;
 }
-@media only screen and (max-width: 500px){
-	.responsive {
-		width: 100%;
-	}
+@media screen and (max-width: 800px){
+  div.column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 600px){
+  div.column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 
 h1 {
@@ -127,6 +133,13 @@ a.staff:link, a.staff:visited {
 a.staff:hover, a.staff:active {
 	color: goldenrod;
 	cursor: pointer;
+}
+
+img.img-post {
+  display: block;
+  vertical-align: middle;
+  width: 40%;
+  margin: 1%;
 }
 
 footer {
