@@ -12,6 +12,17 @@ header.nav-bar {
   padding-left: 10px;
   padding-right: 10px; }
 
+img {
+  display: block;
+  margin: auto;
+  padding-bottom: 2%;
+  width: 60%; }
+
+div.photo-meta {
+  font-family: monospace;
+  text-align: right;
+  padding-bottom: 1.5%; }
+
 * {
   box-sizing: border-box; }
 

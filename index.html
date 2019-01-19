@@ -3,9 +3,8 @@ layout: default
 title: Home
 ---
 <h1>Q's Photography</h1>
-
-{% assign shuffled = site.photos | shuffle %}
-{% for image in shuffled limit:10 %}
+{% assign sorted_photos = site.photos | sort:'number' | reverse %}
+{% for image in sorted_photos limit:10 %}
   <div class="responsive">
     <div class="gallery">
       <a href="{{ image.url }}">

@@ -2,7 +2,19 @@
 layout: default
 title: Blog
 ---
-<h1>Latest Posts</h1>
+
+<h1>Latest Photos</h1>
+<ul class="blog">
+  {% assign sorted_photos = site.photos | sort:'number' | reverse %}
+	{% for photo in sorted_photos limit:5 %}
+		<li>
+      <h3><a class="post" href="{{ photo.url }}">{{ photo.title }}</a></h3>
+      <p>{{ photo.excerpt }}</p>
+    </li>
+	{% endfor %}
+</ul>
+
+<h1>Photo Catagories</h1>
 
 <ul class="blog">
   {% for post in site.posts %}
