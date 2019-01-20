@@ -1,0 +1,26 @@
+---
+layout: default
+title: Archive
+---
+<h1>Photos</h1>
+
+<ul class="archive">
+  {% assign sorted = site.photos | sort:'number' | reverse %}
+  {% for post in sorted %}
+    <li>
+      <h3><a class="post" href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt }}</p>
+    </li>
+  {% endfor %}
+</ul>
+
+<h1>Posts</h1>
+
+<ul class="archive">
+  {% for post in site.posts %}
+    <li>
+      <h3><a class="post" href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt }}</p>
+    </li>
+  {% endfor %}
+</ul>

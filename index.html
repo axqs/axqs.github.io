@@ -2,13 +2,27 @@
 layout: default
 title: Home
 ---
-<h1>Q's Photography</h1>
-{% assign shuffled = site.topphotos | shuffle %}
+<h1 class="intro">Welcome to my page!</h1>
+
+<h1>Latest Photos</h1>
+
 <div class="row">
-  {% for photo in shuffled limit:8 %}
+  {% assign sorted = site.photos | sort:'number' | reverse %}
+  {% for photo in sorted limit:8 %}
     <div class="column">
         <a href="{{ photo.url }}">
         <img src="/assets/photos/{{ photo.imgPath }}" alt="{{ photo.alt }}" style="width:100%"></a>
     </div>
   {% endfor %}
 </div>
+
+<h1>Photo Catagories</h1>
+
+<ul class="blog">
+  {% for post in site.posts %}
+    <li>
+      <h3><a class="post" href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt }}</p>
+    </li>
+  {% endfor %}
+</ul>

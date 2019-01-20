@@ -2,8 +2,8 @@
 #  link: /staff.html
 - name: Photo Gallery
   link: /photos.html
-- name: Blog
-  link: /blog.html
+#- name: Blog
+#  link: /blog.html
 - name: About
   link: /about.html
 - name: Home

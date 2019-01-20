@@ -2,8 +2,8 @@ html {
   background-color: whitesmoke;
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 2%;
-  padding-bottom: 2%; }
+  padding-top: 1.5%;
+  padding-bottom: 3%; }
 
 header.nav-bar {
   background-color: silver;
@@ -53,6 +53,7 @@ div.column img:hover {
     flex: 100%;
     max-width: 100%; } }
 h1 {
+  font-size: 25px;
   clear: right;
   font-family: sans-serif;
   border-bottom: 4px solid midnightblue;
@@ -61,7 +62,13 @@ h1 {
 h2, h3, h4, h5, h6 {
   font-family: sans-serif; }
 
+h1.intro {
+  border-bottom: 0px;
+  font-family: monospace;
+  text-align: center; }
+
 p {
+  font-weight: normal;
   font-family: monospace;
   font-size: 13px; }
 
@@ -73,9 +80,10 @@ ul.staff li {
   padding-left: 10px;
   border-left: 5px double firebrick; }
 
-ul.blog {
+ul.archive {
   font-size: 15px;
-  list-style-type: square; }
+  list-style-type: square;
+  line-height: 44%; }
 
 a.current {
   float: right;

@@ -11,10 +11,17 @@
     </header>
     {{ content }}
     <footer>
-      {% for item in site.data.footer %}
-    		<a class="footer" href="{{ item.link }}" target="_blank">
-    			{{ item.name }}
-    		</a>
+      {% assign foot = site.data.footer %}
+      {% for item in foot %}
+        {% if item == foot.last %}
+          <a class="footer" href="{{ item.link }}">
+      			{{ item.name }}
+      		</a>
+        {% else %}
+      		<a class="footer" href="{{ item.link }}" target="_blank">
+      			{{ item.name }}
+      		</a>
+        {% endif %}
     	{% endfor %}
     </footer>
   </body>
