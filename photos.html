@@ -4,9 +4,8 @@ title: Photo Gallery
 ---
 <h1>Photo Gallery</h1>
 
-<!-- {% assign shuffled = site.photos | shuffle %} -->
-{% assign shuffled = site.photos | sort:'number' | reverse %}
 <div class="row">
+  {% assign shuffled = site.photos | shuffle %}
   {% assign len = shuffled.size %}
   {% assign cols = 4 %}
   {% assign lines = shuffled.size | divided_by:cols %}

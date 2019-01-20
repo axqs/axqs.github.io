@@ -5,22 +5,10 @@ title: Home
 <h1>Q's Photography</h1>
 {% assign shuffled = site.topphotos | shuffle %}
 <div class="row">
-  {% assign len = shuffled.size %}
-  {% assign cols = 1 %}
-  {% assign lines = shuffled.size | divided_by:cols %}
-
-  {% assign start = 0 %}
-  {% for i in (0..lines) %}
+  {% for photo in shuffled limit:8 %}
     <div class="column">
-      {% assign offset = start | plus:cols | minus:1 %}
-      {% if offset >= len %}
-        {% assign offset = len | minus:1 %}
-      {% endif %}
-      {% for k in (start..offset) %}
-        <a href="{{ shuffled[k].url }}">
-        <img src="/assets/photos/{{ shuffled[k].imgPath }}" alt="{{ shuffled[k].alt }}" style="width:100%"></a>
-      {% endfor %}
+        <a href="{{ photo.url }}">
+        <img src="/assets/photos/{{ photo.imgPath }}" alt="{{ photo.alt }}" style="width:100%"></a>
     </div>
-    {% assign start = start | plus:cols %}
   {% endfor %}
 </div>
