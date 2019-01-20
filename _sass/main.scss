@@ -2,7 +2,6 @@ html {
 	background-color: whitesmoke;
 	padding-left: 10%;
 	padding-right: 10%;
-	padding-top: 1.5%;
 	padding-bottom: 3%;
 }
 header.nav-bar {
@@ -60,13 +59,15 @@ div.column img:hover {
 }
 
 h1 {
+  line-height: 70%;
   font-size: 25px;
 	clear: right;
 	font-family: sans-serif;
 	border-bottom: 4px solid midnightblue;
-	padding-bottom: 10px;
+	padding-bottom: 8px;
 }
 h2, h3, h4, h5, h6 {
+  line-height: 2%;
 	font-family: sans-serif;
 }
 h1.intro {
