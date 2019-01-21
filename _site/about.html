@@ -26,7 +26,115 @@
     </header>
     <h1 id="about-me">About Me</h1>
 
-<p>This page tells you a little about me.</p>
+<p>Test syntax highlighting.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">import copy
+
+# verb, no noun, just print out the description of the room and objects
+def describe():
+    room = current_room
+    print(rooms[room][&quot;description&quot;])
+    # print out each object
+    for obj in rooms[room][&quot;objects&quot;]:
+        print(&quot;There is a %s here&quot; % obj)
+
+# verb, one noun
+def go(direction):
+    # change the current room
+    global current_room
+    # check we can go that way
+    if direction in rooms[current_room][&quot;exits&quot;]:
+        # if so, update location and describe it
+        current_room = rooms[current_room][&quot;exits&quot;][direction]
+        describe()
+    else:
+        print(&quot;I can&#39;t go %s&quot; % direction)
+
+# verb, one noun
+def take(obj):
+    if obj in rooms[current_room][&quot;objects&quot;]:
+        inventory[obj] = rooms[current_room][&quot;objects&quot;][obj]
+        print(&quot;You take the %s&quot; % obj)
+        del rooms[current_room][&quot;objects&quot;][obj]
+    else:
+        print(&quot;I don&#39;t see %s&quot; % obj)
+
+# verb, one noun
+def drop(obj):
+    if obj in inventory:
+        rooms[current_room][&quot;objects&quot;][obj] = inventory[obj]
+        del inventory[obj]
+    else:
+        print(&quot;I don&#39;t have %s&quot; % obj)
+
+# verb, no noun
+def list_inventory():
+    print(&quot;I&#39;m carrying:&quot;)
+    print(&quot;\n&quot;.join(list(inventory.keys())))
+
+# verb, no noun
+def exits():
+    print(&quot;\n&quot;.join(rooms[current_room][&quot;exits&quot;]))
+
+# examine the object, checking first the inventory, and then the objects in the room
+def examine(obj):
+    if obj in inventory:
+        print(inventory[obj])
+    elif obj in rooms[current_room][&quot;objects&quot;]:
+        print(rooms[current_room][&quot;objects&quot;][obj])
+    else:
+        print(&quot;I can&#39;t see %s&quot; % obj)
+
+keep_going = True
+
+def quit():
+    global keep_going
+    keep_going = False
+
+# map verbs to functions: these could also map to tuples (fn, number_of_nouns)
+actions = {
+    &quot;go&quot;: go,
+    &quot;take&quot;: take,
+    &quot;drop&quot;: drop,
+    &quot;inventory&quot;: list_inventory,
+    &quot;exits&quot;: exits,
+    &quot;examine&quot;: examine,
+    &quot;look&quot;: describe,
+    &quot;quit&quot;: quit
+}
+
+# no real alternative to using some form of global
+# vars, since objects and inner scopes haven&#39;t
+# been introduced
+def game():
+    global current_room, inventory, rooms, keep_going
+    keep_going = True
+    current_world = copy.deepcopy(world)
+    current_room = current_world[&quot;start_room&quot;]
+    inventory = current_world[&quot;start_inventory&quot;]
+    rooms = current_world[&quot;rooms&quot;]
+    describe()
+    while keep_going:
+        # get input
+        command = input(&quot;&gt;&quot;)
+        elements = command.split()
+        if len(elements) &gt; 0:
+            verb = elements[0]
+            if verb in actions:
+                # no noun verbs
+                if len(elements) == 1:
+                    actions[verb]()
+                # one noun verb
+                elif len(elements) == 2:
+                    noun = elements[1]
+                    actions[verb](noun)
+            else:
+                print(&quot;I don&#39;t know how to %s&quot; % elements[0])
+
+        print()
+
+game()</code></pre></figure>
+
 
     <footer>
       

@@ -1,3 +1,10 @@
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  extensions: fenced_code_blocks
+
 collections:
   authors:
     output: true
