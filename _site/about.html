@@ -28,112 +28,112 @@
 
 <p>Test syntax highlighting.</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python">import copy
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">copy</span>
 
-# verb, no noun, just print out the description of the room and objects
-def describe():
-    room = current_room
-    print(rooms[room][&quot;description&quot;])
-    # print out each object
-    for obj in rooms[room][&quot;objects&quot;]:
-        print(&quot;There is a %s here&quot; % obj)
+<span class="c1"># verb, no noun, just print out the description of the room and objects
+</span><span class="k">def</span> <span class="nf">describe</span><span class="p">():</span>
+    <span class="n">room</span> <span class="o">=</span> <span class="n">current_room</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">rooms</span><span class="p">[</span><span class="n">room</span><span class="p">][</span><span class="s">"description"</span><span class="p">])</span>
+    <span class="c1"># print out each object
+</span>    <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">rooms</span><span class="p">[</span><span class="n">room</span><span class="p">][</span><span class="s">"objects"</span><span class="p">]:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"There is a </span><span class="si">%</span><span class="s">s here"</span> <span class="o">%</span> <span class="n">obj</span><span class="p">)</span>
 
-# verb, one noun
-def go(direction):
-    # change the current room
-    global current_room
-    # check we can go that way
-    if direction in rooms[current_room][&quot;exits&quot;]:
-        # if so, update location and describe it
-        current_room = rooms[current_room][&quot;exits&quot;][direction]
-        describe()
-    else:
-        print(&quot;I can&#39;t go %s&quot; % direction)
+<span class="c1"># verb, one noun
+</span><span class="k">def</span> <span class="nf">go</span><span class="p">(</span><span class="n">direction</span><span class="p">):</span>
+    <span class="c1"># change the current room
+</span>    <span class="k">global</span> <span class="n">current_room</span>
+    <span class="c1"># check we can go that way
+</span>    <span class="k">if</span> <span class="n">direction</span> <span class="ow">in</span> <span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"exits"</span><span class="p">]:</span>
+        <span class="c1"># if so, update location and describe it
+</span>        <span class="n">current_room</span> <span class="o">=</span> <span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"exits"</span><span class="p">][</span><span class="n">direction</span><span class="p">]</span>
+        <span class="n">describe</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"I can't go </span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="n">direction</span><span class="p">)</span>
 
-# verb, one noun
-def take(obj):
-    if obj in rooms[current_room][&quot;objects&quot;]:
-        inventory[obj] = rooms[current_room][&quot;objects&quot;][obj]
-        print(&quot;You take the %s&quot; % obj)
-        del rooms[current_room][&quot;objects&quot;][obj]
-    else:
-        print(&quot;I don&#39;t see %s&quot; % obj)
+<span class="c1"># verb, one noun
+</span><span class="k">def</span> <span class="nf">take</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"objects"</span><span class="p">]:</span>
+        <span class="n">inventory</span><span class="p">[</span><span class="n">obj</span><span class="p">]</span> <span class="o">=</span> <span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"objects"</span><span class="p">][</span><span class="n">obj</span><span class="p">]</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"You take the </span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="n">obj</span><span class="p">)</span>
+        <span class="k">del</span> <span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"objects"</span><span class="p">][</span><span class="n">obj</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"I don't see </span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="n">obj</span><span class="p">)</span>
 
-# verb, one noun
-def drop(obj):
-    if obj in inventory:
-        rooms[current_room][&quot;objects&quot;][obj] = inventory[obj]
-        del inventory[obj]
-    else:
-        print(&quot;I don&#39;t have %s&quot; % obj)
+<span class="c1"># verb, one noun
+</span><span class="k">def</span> <span class="nf">drop</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">inventory</span><span class="p">:</span>
+        <span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"objects"</span><span class="p">][</span><span class="n">obj</span><span class="p">]</span> <span class="o">=</span> <span class="n">inventory</span><span class="p">[</span><span class="n">obj</span><span class="p">]</span>
+        <span class="k">del</span> <span class="n">inventory</span><span class="p">[</span><span class="n">obj</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"I don't have </span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="n">obj</span><span class="p">)</span>
 
-# verb, no noun
-def list_inventory():
-    print(&quot;I&#39;m carrying:&quot;)
-    print(&quot;\n&quot;.join(list(inventory.keys())))
+<span class="c1"># verb, no noun
+</span><span class="k">def</span> <span class="nf">list_inventory</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"I'm carrying:"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">inventory</span><span class="o">.</span><span class="n">keys</span><span class="p">())))</span>
 
-# verb, no noun
-def exits():
-    print(&quot;\n&quot;.join(rooms[current_room][&quot;exits&quot;]))
+<span class="c1"># verb, no noun
+</span><span class="k">def</span> <span class="nf">exits</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"exits"</span><span class="p">]))</span>
 
-# examine the object, checking first the inventory, and then the objects in the room
-def examine(obj):
-    if obj in inventory:
-        print(inventory[obj])
-    elif obj in rooms[current_room][&quot;objects&quot;]:
-        print(rooms[current_room][&quot;objects&quot;][obj])
-    else:
-        print(&quot;I can&#39;t see %s&quot; % obj)
+<span class="c1"># examine the object, checking first the inventory, and then the objects in the room
+</span><span class="k">def</span> <span class="nf">examine</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">inventory</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">inventory</span><span class="p">[</span><span class="n">obj</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"objects"</span><span class="p">]:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"objects"</span><span class="p">][</span><span class="n">obj</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"I can't see </span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="n">obj</span><span class="p">)</span>
 
-keep_going = True
+<span class="n">keep_going</span> <span class="o">=</span> <span class="bp">True</span>
 
-def quit():
-    global keep_going
-    keep_going = False
+<span class="k">def</span> <span class="nf">quit</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">keep_going</span>
+    <span class="n">keep_going</span> <span class="o">=</span> <span class="bp">False</span>
 
-# map verbs to functions: these could also map to tuples (fn, number_of_nouns)
-actions = {
-    &quot;go&quot;: go,
-    &quot;take&quot;: take,
-    &quot;drop&quot;: drop,
-    &quot;inventory&quot;: list_inventory,
-    &quot;exits&quot;: exits,
-    &quot;examine&quot;: examine,
-    &quot;look&quot;: describe,
-    &quot;quit&quot;: quit
-}
+<span class="c1"># map verbs to functions: these could also map to tuples (fn, number_of_nouns)
+</span><span class="n">actions</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"go"</span><span class="p">:</span> <span class="n">go</span><span class="p">,</span>
+    <span class="s">"take"</span><span class="p">:</span> <span class="n">take</span><span class="p">,</span>
+    <span class="s">"drop"</span><span class="p">:</span> <span class="n">drop</span><span class="p">,</span>
+    <span class="s">"inventory"</span><span class="p">:</span> <span class="n">list_inventory</span><span class="p">,</span>
+    <span class="s">"exits"</span><span class="p">:</span> <span class="n">exits</span><span class="p">,</span>
+    <span class="s">"examine"</span><span class="p">:</span> <span class="n">examine</span><span class="p">,</span>
+    <span class="s">"look"</span><span class="p">:</span> <span class="n">describe</span><span class="p">,</span>
+    <span class="s">"quit"</span><span class="p">:</span> <span class="n">quit</span>
+<span class="p">}</span>
 
-# no real alternative to using some form of global
-# vars, since objects and inner scopes haven&#39;t
+<span class="c1"># no real alternative to using some form of global
+# vars, since objects and inner scopes haven't
 # been introduced
-def game():
-    global current_room, inventory, rooms, keep_going
-    keep_going = True
-    current_world = copy.deepcopy(world)
-    current_room = current_world[&quot;start_room&quot;]
-    inventory = current_world[&quot;start_inventory&quot;]
-    rooms = current_world[&quot;rooms&quot;]
-    describe()
-    while keep_going:
-        # get input
-        command = input(&quot;&gt;&quot;)
-        elements = command.split()
-        if len(elements) &gt; 0:
-            verb = elements[0]
-            if verb in actions:
-                # no noun verbs
-                if len(elements) == 1:
-                    actions[verb]()
-                # one noun verb
-                elif len(elements) == 2:
-                    noun = elements[1]
-                    actions[verb](noun)
-            else:
-                print(&quot;I don&#39;t know how to %s&quot; % elements[0])
+</span><span class="k">def</span> <span class="nf">game</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">current_room</span><span class="p">,</span> <span class="n">inventory</span><span class="p">,</span> <span class="n">rooms</span><span class="p">,</span> <span class="n">keep_going</span>
+    <span class="n">keep_going</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="n">current_world</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">world</span><span class="p">)</span>
+    <span class="n">current_room</span> <span class="o">=</span> <span class="n">current_world</span><span class="p">[</span><span class="s">"start_room"</span><span class="p">]</span>
+    <span class="n">inventory</span> <span class="o">=</span> <span class="n">current_world</span><span class="p">[</span><span class="s">"start_inventory"</span><span class="p">]</span>
+    <span class="n">rooms</span> <span class="o">=</span> <span class="n">current_world</span><span class="p">[</span><span class="s">"rooms"</span><span class="p">]</span>
+    <span class="n">describe</span><span class="p">()</span>
+    <span class="k">while</span> <span class="n">keep_going</span><span class="p">:</span>
+        <span class="c1"># get input
+</span>        <span class="n">command</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"&gt;"</span><span class="p">)</span>
+        <span class="n">elements</span> <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">verb</span> <span class="o">=</span> <span class="n">elements</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">verb</span> <span class="ow">in</span> <span class="n">actions</span><span class="p">:</span>
+                <span class="c1"># no noun verbs
+</span>                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">actions</span><span class="p">[</span><span class="n">verb</span><span class="p">]()</span>
+                <span class="c1"># one noun verb
+</span>                <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="n">noun</span> <span class="o">=</span> <span class="n">elements</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">actions</span><span class="p">[</span><span class="n">verb</span><span class="p">](</span><span class="n">noun</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">"I don't know how to </span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="n">elements</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
-        print()
+        <span class="k">print</span><span class="p">()</span>
 
-game()</code></pre></figure>
+<span class="n">game</span><span class="p">()</span></code></pre></figure>
 
 
     <footer>
