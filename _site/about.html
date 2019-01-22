@@ -28,6 +28,8 @@
 
 <p>Test syntax highlighting.</p>
 
+<h3 id="header-3-with-python">Header 3: With Python</h3>
+
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">copy</span>
 
 <span class="c1"># verb, no noun, just print out the description of the room and objects
@@ -37,71 +39,6 @@
     <span class="c1"># print out each object
 </span>    <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">rooms</span><span class="p">[</span><span class="n">room</span><span class="p">][</span><span class="s">"objects"</span><span class="p">]:</span>
         <span class="k">print</span><span class="p">(</span><span class="s">"There is a </span><span class="si">%</span><span class="s">s here"</span> <span class="o">%</span> <span class="n">obj</span><span class="p">)</span>
-
-<span class="c1"># verb, one noun
-</span><span class="k">def</span> <span class="nf">go</span><span class="p">(</span><span class="n">direction</span><span class="p">):</span>
-    <span class="c1"># change the current room
-</span>    <span class="k">global</span> <span class="n">current_room</span>
-    <span class="c1"># check we can go that way
-</span>    <span class="k">if</span> <span class="n">direction</span> <span class="ow">in</span> <span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"exits"</span><span class="p">]:</span>
-        <span class="c1"># if so, update location and describe it
-</span>        <span class="n">current_room</span> <span class="o">=</span> <span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"exits"</span><span class="p">][</span><span class="n">direction</span><span class="p">]</span>
-        <span class="n">describe</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"I can't go </span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="n">direction</span><span class="p">)</span>
-
-<span class="c1"># verb, one noun
-</span><span class="k">def</span> <span class="nf">take</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"objects"</span><span class="p">]:</span>
-        <span class="n">inventory</span><span class="p">[</span><span class="n">obj</span><span class="p">]</span> <span class="o">=</span> <span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"objects"</span><span class="p">][</span><span class="n">obj</span><span class="p">]</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"You take the </span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="n">obj</span><span class="p">)</span>
-        <span class="k">del</span> <span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"objects"</span><span class="p">][</span><span class="n">obj</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"I don't see </span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="n">obj</span><span class="p">)</span>
-
-<span class="c1"># verb, one noun
-</span><span class="k">def</span> <span class="nf">drop</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">inventory</span><span class="p">:</span>
-        <span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"objects"</span><span class="p">][</span><span class="n">obj</span><span class="p">]</span> <span class="o">=</span> <span class="n">inventory</span><span class="p">[</span><span class="n">obj</span><span class="p">]</span>
-        <span class="k">del</span> <span class="n">inventory</span><span class="p">[</span><span class="n">obj</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"I don't have </span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="n">obj</span><span class="p">)</span>
-
-<span class="c1"># verb, no noun
-</span><span class="k">def</span> <span class="nf">list_inventory</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"I'm carrying:"</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">inventory</span><span class="o">.</span><span class="n">keys</span><span class="p">())))</span>
-
-<span class="c1"># verb, no noun
-</span><span class="k">def</span> <span class="nf">exits</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"exits"</span><span class="p">]))</span>
-
-<span class="c1"># examine the object, checking first the inventory, and then the objects in the room
-</span><span class="k">def</span> <span class="nf">examine</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">inventory</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">inventory</span><span class="p">[</span><span class="n">obj</span><span class="p">])</span>
-    <span class="k">elif</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"objects"</span><span class="p">]:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">rooms</span><span class="p">[</span><span class="n">current_room</span><span class="p">][</span><span class="s">"objects"</span><span class="p">][</span><span class="n">obj</span><span class="p">])</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"I can't see </span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="n">obj</span><span class="p">)</span>
-
-<span class="n">keep_going</span> <span class="o">=</span> <span class="bp">True</span>
-
-<span class="k">def</span> <span class="nf">quit</span><span class="p">():</span>
-    <span class="k">global</span> <span class="n">keep_going</span>
-    <span class="n">keep_going</span> <span class="o">=</span> <span class="bp">False</span>
-
-<span class="c1"># map verbs to functions: these could also map to tuples (fn, number_of_nouns)
-</span><span class="n">actions</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">"go"</span><span class="p">:</span> <span class="n">go</span><span class="p">,</span>
-    <span class="s">"take"</span><span class="p">:</span> <span class="n">take</span><span class="p">,</span>
-    <span class="s">"drop"</span><span class="p">:</span> <span class="n">drop</span><span class="p">,</span>
-    <span class="s">"inventory"</span><span class="p">:</span> <span class="n">list_inventory</span><span class="p">,</span>
-    <span class="s">"exits"</span><span class="p">:</span> <span class="n">exits</span><span class="p">,</span>
-    <span class="s">"examine"</span><span class="p">:</span> <span class="n">examine</span><span class="p">,</span>
-    <span class="s">"look"</span><span class="p">:</span> <span class="n">describe</span><span class="p">,</span>
-    <span class="s">"quit"</span><span class="p">:</span> <span class="n">quit</span>
-<span class="p">}</span>
 
 <span class="c1"># no real alternative to using some form of global
 # vars, since objects and inner scopes haven't
@@ -134,6 +71,54 @@
         <span class="k">print</span><span class="p">()</span>
 
 <span class="n">game</span><span class="p">()</span></code></pre></figure>
+
+<h3 id="header-3-with-java">Header 3: With Java</h3>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Player</span> <span class="o">{</span>
+
+	<span class="kd">private</span> <span class="kt">int</span> <span class="n">coins</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">GameCharacter</span><span class="o">&gt;</span> <span class="n">characters</span><span class="o">;</span>
+
+	<span class="cm">/**
+	 * Creates new Player with given properties
+	 */</span>
+	<span class="kd">public</span> <span class="nf">Player</span><span class="o">(</span><span class="kt">int</span> <span class="n">coins</span><span class="o">,</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">GameCharacter</span><span class="o">&gt;</span> <span class="n">characters</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">coins</span> <span class="o">=</span> <span class="n">coins</span><span class="o">;</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">characters</span> <span class="o">=</span> <span class="n">characters</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="c1">//Getter methods</span>
+	<span class="cm">/**
+	 * Gets the amount of coins the player has
+	 * @return int players coins
+	 */</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getCoins</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">coins</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="kd">private</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Power</span><span class="o">&gt;</span> <span class="nf">neededPowers</span><span class="o">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">GameCharacter</span><span class="o">&gt;</span> <span class="n">currentCharacters</span><span class="o">,</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Power</span><span class="o">&gt;</span> <span class="n">powers</span><span class="o">){</span>
+  		<span class="n">Set</span><span class="o">&lt;</span><span class="n">Power</span><span class="o">&gt;</span> <span class="n">currentPowers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;&gt;();</span>
+  		<span class="n">currentCharacters</span><span class="o">.</span><span class="na">stream</span><span class="o">().</span><span class="na">forEach</span><span class="o">(</span><span class="n">c</span> <span class="o">-&gt;</span> <span class="n">currentPowers</span><span class="o">.</span><span class="na">addAll</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">getPowers</span><span class="o">()));</span>
+  		<span class="n">Set</span><span class="o">&lt;</span><span class="n">Power</span><span class="o">&gt;</span> <span class="n">needed</span> <span class="o">=</span> <span class="n">powers</span><span class="o">.</span><span class="na">stream</span><span class="o">().</span><span class="na">filter</span><span class="o">(</span><span class="n">p</span> <span class="o">-&gt;</span> <span class="o">!</span><span class="n">currentPowers</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">p</span><span class="o">)).</span><span class="na">collect</span><span class="o">(</span><span class="n">Collectors</span><span class="o">.</span><span class="na">toSet</span><span class="o">());</span>
+  		<span class="k">return</span> <span class="n">needed</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">canUse</span><span class="o">(</span><span class="n">GameCharacter</span> <span class="n">gc</span><span class="o">,</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Power</span><span class="o">&gt;</span> <span class="n">powers</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">for</span><span class="o">(</span><span class="n">Power</span> <span class="n">p</span> <span class="o">:</span> <span class="n">gc</span><span class="o">.</span><span class="na">getPowers</span><span class="o">())</span> <span class="o">{</span>
+			<span class="k">if</span><span class="o">(</span><span class="n">powers</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">p</span><span class="o">))</span> <span class="o">{</span>
+				<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+		<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+	<span class="o">}</span></code></pre></figure>
+
+<h3 id="header-3-with-html">Header 3: With HTML</h3>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- practice html --&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kd"</span><span class="nt">&gt;</span>public<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kt"</span><span class="nt">&gt;</span>int<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>getCoins<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"o"</span><span class="nt">&gt;</span>()<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"o"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>return<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>this<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"o"</span><span class="nt">&gt;</span>.<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>coins<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"o"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"o"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span></code></pre></figure>
 
 
     <footer>

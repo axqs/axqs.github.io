@@ -6,6 +6,8 @@ title: About
 
 Test syntax highlighting.
 
+### Header 3: With Python
+
 {% highlight python %}
 
 import copy
@@ -17,71 +19,6 @@ def describe():
     # print out each object
     for obj in rooms[room]["objects"]:
         print("There is a %s here" % obj)
-
-# verb, one noun
-def go(direction):
-    # change the current room
-    global current_room
-    # check we can go that way
-    if direction in rooms[current_room]["exits"]:
-        # if so, update location and describe it
-        current_room = rooms[current_room]["exits"][direction]
-        describe()
-    else:
-        print("I can't go %s" % direction)
-
-# verb, one noun
-def take(obj):
-    if obj in rooms[current_room]["objects"]:
-        inventory[obj] = rooms[current_room]["objects"][obj]
-        print("You take the %s" % obj)
-        del rooms[current_room]["objects"][obj]
-    else:
-        print("I don't see %s" % obj)
-
-# verb, one noun
-def drop(obj):
-    if obj in inventory:
-        rooms[current_room]["objects"][obj] = inventory[obj]
-        del inventory[obj]
-    else:
-        print("I don't have %s" % obj)
-
-# verb, no noun
-def list_inventory():
-    print("I'm carrying:")
-    print("\n".join(list(inventory.keys())))
-
-# verb, no noun
-def exits():
-    print("\n".join(rooms[current_room]["exits"]))
-
-# examine the object, checking first the inventory, and then the objects in the room
-def examine(obj):
-    if obj in inventory:
-        print(inventory[obj])
-    elif obj in rooms[current_room]["objects"]:
-        print(rooms[current_room]["objects"][obj])
-    else:
-        print("I can't see %s" % obj)
-
-keep_going = True
-
-def quit():
-    global keep_going
-    keep_going = False
-
-# map verbs to functions: these could also map to tuples (fn, number_of_nouns)
-actions = {
-    "go": go,
-    "take": take,
-    "drop": drop,
-    "inventory": list_inventory,
-    "exits": exits,
-    "examine": examine,
-    "look": describe,
-    "quit": quit
-}
 
 # no real alternative to using some form of global
 # vars, since objects and inner scopes haven't
@@ -114,5 +51,62 @@ def game():
         print()
 
 game()
+
+{% endhighlight %}
+
+### Header 3: With Java
+
+{% highlight java %}
+
+public class Player {
+
+	private int coins;
+	private Set<GameCharacter> characters;
+
+	/**
+	 * Creates new Player with given properties
+	 */
+	public Player(int coins, Set<GameCharacter> characters) {
+		this.coins = coins;
+		this.characters = characters;
+	}
+
+	//Getter methods
+	/**
+	 * Gets the amount of coins the player has
+	 * @return int players coins
+	 */
+	public int getCoins() {
+		return this.coins;
+	}
+
+	private Set<Power> neededPowers(Set<GameCharacter> currentCharacters, Set<Power> powers){
+  		Set<Power> currentPowers = new HashSet<>();
+  		currentCharacters.stream().forEach(c -> currentPowers.addAll(c.getPowers()));
+  		Set<Power> needed = powers.stream().filter(p -> !currentPowers.contains(p)).collect(Collectors.toSet());
+  		return needed;
+	}
+
+	private boolean canUse(GameCharacter gc, Set<Power> powers) {
+		for(Power p : gc.getPowers()) {
+			if(powers.contains(p)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+
+{% endhighlight %}
+
+### Header 3: With HTML
+
+{% highlight html %}
+
+<!-- practice html -->
+
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getCoins</span><span class="o">()</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">coins</span><span class="o">;</span>
+<span class="o">}</span>
 
 {% endhighlight %}

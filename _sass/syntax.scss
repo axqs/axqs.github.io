@@ -1,77 +1,80 @@
-highlight .hll { background-color: #49483e }
-.highlight  {
-  background: #303030; /* background */
-  color: darkgrey; /* text */
-  padding-left: 4%;
-  padding-right: 4%;
-  overflow: auto;
+figure .hll { background-color: #49483e }
+figure.highlight  {
+  background: #2E3440; /* background */
+  color: #9F79CB; /* generall text */
+  font-weight: 50;
+  overflow: scroll;
   word-break: normal;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 10px;
+  border-style: inset;
  }
-.highlight .c { color: #75715e } /* Comment light green/grey */
+.highlight .c { color: #8D8D8D } /* Comment light grey */
 .highlight .err { color: #960050; /* dark pink */ background-color: #1e0010 /* dark purple, almost black */} /* Error */
-.highlight .k { color: #a06ae2 } /* Keyword light blue */
-.highlight .l { color: #ae81ff } /* Literal light purple */
-.highlight .n { color: #f8f8f2 } /* Name basically white */
-.highlight .o { color: #f92672 } /* Operator neon pink */
-.highlight .p { color: #f8f8f2 } /* Punctuation basically white */
-.highlight .ch { color: #75715e } /* Comment.Hashbang light green/grey */
-.highlight .cm { color: #75715e } /* Comment.Multiline light green/grey */
-.highlight .cp { color: #75715e } /* Comment.Preproc light green/grey */
-.highlight .cpf { color: #75715e } /* Comment.PreprocFile light green/grey */
-.highlight .c1 { color: #75715e } /* Comment.Single light green/grey */
-.highlight .cs { color: #75715e } /* Comment.Special light green/grey */
+.highlight .k { color: #9F79CB } /* Keyword purple */
+.highlight .l { color: #9F79CB } /* Literal light purple */
+.highlight .n { color: #C9C9C9 } /* Name basically white */
+.highlight .o { color: #C9C9C9 } /* Operator basically white */
+.highlight .p { color: #C9C9C9 } /* Punctuation basically white */
+.highlight .ch { color: #8D8D8D } /* Comment.Hashbang light green/grey */
+.highlight .cm { color: #8D8D8D } /* Comment.Multiline light green/grey */
+.highlight .cp { color: #8D8D8D } /* Comment.Preproc light green/grey */
+.highlight .cpf { color: #8D8D8D } /* Comment.PreprocFile light green/grey */
+.highlight .c1 { color: #8D8D8D } /* Comment.Single light green/grey */
+.highlight .cs { color: #8D8D8D } /* Comment.Special light green/grey */
 .highlight .gd { color: #f92672 } /* Generic.Deleted neon pink */
 .highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gi { color: #51bcff } /* Generic.Inserted neon green*/
+.highlight .gi { color: #57ABE4 } /* Generic.Inserted blue*/
 .highlight .gs { font-weight: bold } /* Generic.Strong */
-.highlight .gu { color: #75715e } /* Generic.Subheading light green/grey */
-.highlight .kc { color: #a06ae2 } /* Keyword.Constant light blue */
-.highlight .kd { color: #a06ae2 } /* Keyword.Declaration light blue */
-.highlight .kn { color: #f92672 } /* Keyword.Namespace neon pink */
-.highlight .kp { color: #a06ae2 } /* Keyword.Pseudo light blue */
-.highlight .kr { color: #a06ae2 } /* Keyword.Reserved light blue */
-.highlight .kt { color: #a06ae2 } /* Keyword.Type light blue */
-.highlight .ld { color: #e6db74 } /* Literal.Date light yellow */
-.highlight .m { color: #ae81ff } /* Literal.Number light purple */
-.highlight .s { color: #e6db74 } /* Literal.String light yellow */
-.highlight .na { color: #51bcff } /* Name.Attribute neon green */
-.highlight .nb { color: #f8f8f2 } /* Name.Builtin basically white */
-.highlight .nc { color: #51bcff } /* Name.Class neon green */
-.highlight .no { color: #a06ae2 } /* Name.Constant light blue */
-.highlight .nd { color: #51bcff } /* Name.Decorator neon green */
-.highlight .ni { color: #f8f8f2 } /* Name.Entity basically white */
-.highlight .ne { color: #51bcff } /* Name.Exception neon green */
-.highlight .nf { color: #51bcff } /* Name.Function neon green */
-.highlight .nl { color: #f8f8f2 } /* Name.Label basically white */
-.highlight .nn { color: #f8f8f2 } /* Name.Namespace basically white */
-.highlight .nx { color: #51bcff } /* Name.Other neon green */
-.highlight .py { color: #f8f8f2 } /* Name.Property basically white */
-.highlight .nt { color: #f92672 } /* Name.Tag neon pink */
-.highlight .nv { color: #f8f8f2 } /* Name.Variable basically white */
-.highlight .ow { color: #f92672 } /* Operator.Word neon pink */
-.highlight .w { color: #f8f8f2 } /* Text.Whitespace basically white */
-.highlight .mb { color: #ae81ff } /* Literal.Number.Bin light purple */
-.highlight .mf { color: #ae81ff } /* Literal.Number.Float light purple */
-.highlight .mh { color: #ae81ff } /* Literal.Number.Hex light purple */
-.highlight .mi { color: #ae81ff } /* Literal.Number.Integer light purple */
-.highlight .mo { color: #ae81ff } /* Literal.Number.Oct light purple */
-.highlight .sa { color: #e6db74 } /* Literal.String.Affix light yellow */
-.highlight .sb { color: #e6db74 } /* Literal.String.Backtick light yellow */
-.highlight .sc { color: #e6db74 } /* Literal.String.Char light yellow */
-.highlight .dl { color: #e6db74 } /* Literal.String.Delimiter light yellow */
-.highlight .sd { color: #e6db74 } /* Literal.String.Doc light yellow */
-.highlight .s2 { color: #e6db74 } /* Literal.String.Double light yellow */
-.highlight .se { color: #ae81ff } /* Literal.String.Escape light purple */
-.highlight .sh { color: #e6db74 } /* Literal.String.Heredoc light yellow */
-.highlight .si { color: #e6db74 } /* Literal.String.Interpol light yellow */
-.highlight .sx { color: #e6db74 } /* Literal.String.Other light yellow */
-.highlight .sr { color: #e6db74 } /* Literal.String.Regex light yellow */
-.highlight .s1 { color: #e6db74 } /* Literal.String.Single light yellow */
-.highlight .ss { color: #e6db74 } /* Literal.String.Symbol light yellow */
-.highlight .bp { color: #f8f8f2 } /* Name.Builtin.Pseudo basically white */
-.highlight .fm { color: #51bcff } /* Name.Function.Magic neon green */
-.highlight .vc { color: #f8f8f2 } /* Name.Variable.Class basically white */
-.highlight .vg { color: #f8f8f2 } /* Name.Variable.Global basically white */
-.highlight .vi { color: #f8f8f2 } /* Name.Variable.Instance basically white */
-.highlight .vm { color: #f8f8f2 } /* Name.Variable.Magic basically white */
-.highlight .il { color: #ae81ff } /* Literal.Number.Integer.Long light purple */
+.highlight .gu { color: #8D8D8D } /* Generic.Subheading light green/grey */
+.highlight .kc { color: #D8A244 } /* Keyword.Constant orange */
+.highlight .kd { color: #9F79CB } /* Keyword.Declaration purple */
+.highlight .kn { color: #9F79CB } /* Keyword.Namespace neon pink */
+.highlight .kp { color: #9F79CB } /* Keyword.Pseudo purple */
+.highlight .kr { color: #9F79CB } /* Keyword.Reserved purple */
+.highlight .kt { color: #D8A244 } /* Keyword.Type orange */
+.highlight .ld { color: #8BDF7A } /* Literal.Date green */
+.highlight .m { color: #9F79CB } /* Literal.Number light purple */
+.highlight .s { color: #8BDF7A } /* Literal.String green */
+.highlight .na { color: #BA4D58 } /* Name.Attribute red */
+.highlight .nb { color: #57ABE4 } /* Name.Builtin basically white */
+.highlight .nc { color: #D8A244 } /* Name.Class orange */
+.highlight .no { color: #9F79CB } /* Name.Constant purple */
+.highlight .nd { color: #57ABE4 } /* Name.Decorator blue */
+.highlight .ni { color: #C9C9C9 } /* Name.Entity basically white */
+.highlight .ne { color: #57ABE4 } /* Name.Exception blue */
+.highlight .nf { color: #57ABE4 } /* Name.Function blue */
+.highlight .nl { color: #C9C9C9 } /* Name.Label basically white */
+.highlight .nn { color: #C9C9C9 } /* Name.Namespace basically white */
+.highlight .nx { color: #57ABE4 } /* Name.Other blue */
+.highlight .py { color: #C9C9C9 } /* Name.Property basically white */
+.highlight .nt { color: #C9C9C9 } /* Name.Tag basically white */
+.highlight .nv { color: #C9C9C9 } /* Name.Variable basically white */
+.highlight .ow { color: #9F79CB } /* Operator.Word purple */
+.highlight .w { color: #C9C9C9 } /* Text.Whitespace basically white */
+.highlight .mb { color: #D8A244 } /* Literal.Number.Bin orange */
+.highlight .mf { color: #D8A244 } /* Literal.Number.Float orange */
+.highlight .mh { color: #D8A244 } /* Literal.Number.Hex orange */
+.highlight .mi { color: #D8A244 } /* Literal.Number.Integer orange */
+.highlight .mo { color: #D8A244 } /* Literal.Number.Oct orange*/
+.highlight .sa { color: #8BDF7A } /* Literal.String.Affix green */
+.highlight .sb { color: #8BDF7A } /* Literal.String.Backtick green */
+.highlight .sc { color: #8BDF7A } /* Literal.String.Char green */
+.highlight .dl { color: #8BDF7A } /* Literal.String.Delimiter green */
+.highlight .sd { color: #8BDF7A } /* Literal.String.Doc green */
+.highlight .s2 { color: #8BDF7A } /* Literal.String.Double green */
+.highlight .se { color: #58B5B5 } /* Literal.String.Escape light blue */
+.highlight .sh { color: #8BDF7A } /* Literal.String.Heredoc green */
+.highlight .si { color: #8BDF7A } /* Literal.String.Interpol green */
+.highlight .sx { color: #8BDF7A } /* Literal.String.Other green */
+.highlight .sr { color: #8BDF7A } /* Literal.String.Regex green */
+.highlight .s1 { color: #8BDF7A } /* Literal.String.Single green */
+.highlight .ss { color: #8BDF7A } /* Literal.String.Symbol green */
+.highlight .bp { color: #E1AA4C } /* Name.Builtin.Pseudo basically white */
+.highlight .fm { color: #57ABE4 } /* Name.Function.Magic blue */
+.highlight .vc { color: #C9C9C9 } /* Name.Variable.Class basically white */
+.highlight .vg { color: #C9C9C9 } /* Name.Variable.Global basically white */
+.highlight .vi { color: #C9C9C9 } /* Name.Variable.Instance basically white */
+.highlight .vm { color: #C9C9C9 } /* Name.Variable.Magic basically white */
+.highlight .il { color: #9F79CB } /* Literal.Number.Integer.Long light purple */
