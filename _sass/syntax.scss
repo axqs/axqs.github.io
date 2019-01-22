@@ -1,77 +1,45 @@
-.highlight .hll { background-color: #49483e }
-.highlight  {
-  background: #303030; /* background */
-  color: darkgrey; /* text */
-  padding-left: 4%;
-  padding-right: 4%;
-  overflow: auto;
-  word-break: normal;
- }
-.highlight .c { color: #75715e } /* Comment light green/grey */
-.highlight .err { color: #960050; /* dark pink */ background-color: #1e0010 /* dark purple, almost black */} /* Error */
-.highlight .k { color: #a06ae2 } /* Keyword light blue */
-.highlight .l { color: #ae81ff } /* Literal light purple */
-.highlight .n { color: #f8f8f2 } /* Name basically white */
-.highlight .o { color: #f92672 } /* Operator neon pink */
-.highlight .p { color: #f8f8f2 } /* Punctuation basically white */
-.highlight .ch { color: #75715e } /* Comment.Hashbang light green/grey */
-.highlight .cm { color: #75715e } /* Comment.Multiline light green/grey */
-.highlight .cp { color: #75715e } /* Comment.Preproc light green/grey */
-.highlight .cpf { color: #75715e } /* Comment.PreprocFile light green/grey */
-.highlight .c1 { color: #75715e } /* Comment.Single light green/grey */
-.highlight .cs { color: #75715e } /* Comment.Special light green/grey */
-.highlight .gd { color: #f92672 } /* Generic.Deleted neon pink */
-.highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gi { color: #51bcff } /* Generic.Inserted neon green*/
-.highlight .gs { font-weight: bold } /* Generic.Strong */
-.highlight .gu { color: #75715e } /* Generic.Subheading light green/grey */
-.highlight .kc { color: #a06ae2 } /* Keyword.Constant light blue */
-.highlight .kd { color: #a06ae2 } /* Keyword.Declaration light blue */
-.highlight .kn { color: #f92672 } /* Keyword.Namespace neon pink */
-.highlight .kp { color: #a06ae2 } /* Keyword.Pseudo light blue */
-.highlight .kr { color: #a06ae2 } /* Keyword.Reserved light blue */
-.highlight .kt { color: #a06ae2 } /* Keyword.Type light blue */
-.highlight .ld { color: #e6db74 } /* Literal.Date light yellow */
-.highlight .m { color: #ae81ff } /* Literal.Number light purple */
-.highlight .s { color: #e6db74 } /* Literal.String light yellow */
-.highlight .na { color: #51bcff } /* Name.Attribute neon green */
-.highlight .nb { color: #f8f8f2 } /* Name.Builtin basically white */
-.highlight .nc { color: #51bcff } /* Name.Class neon green */
-.highlight .no { color: #a06ae2 } /* Name.Constant light blue */
-.highlight .nd { color: #51bcff } /* Name.Decorator neon green */
-.highlight .ni { color: #f8f8f2 } /* Name.Entity basically white */
-.highlight .ne { color: #51bcff } /* Name.Exception neon green */
-.highlight .nf { color: #51bcff } /* Name.Function neon green */
-.highlight .nl { color: #f8f8f2 } /* Name.Label basically white */
-.highlight .nn { color: #f8f8f2 } /* Name.Namespace basically white */
-.highlight .nx { color: #51bcff } /* Name.Other neon green */
-.highlight .py { color: #f8f8f2 } /* Name.Property basically white */
-.highlight .nt { color: #f92672 } /* Name.Tag neon pink */
-.highlight .nv { color: #f8f8f2 } /* Name.Variable basically white */
-.highlight .ow { color: #f92672 } /* Operator.Word neon pink */
-.highlight .w { color: #f8f8f2 } /* Text.Whitespace basically white */
-.highlight .mb { color: #ae81ff } /* Literal.Number.Bin light purple */
-.highlight .mf { color: #ae81ff } /* Literal.Number.Float light purple */
-.highlight .mh { color: #ae81ff } /* Literal.Number.Hex light purple */
-.highlight .mi { color: #ae81ff } /* Literal.Number.Integer light purple */
-.highlight .mo { color: #ae81ff } /* Literal.Number.Oct light purple */
-.highlight .sa { color: #e6db74 } /* Literal.String.Affix light yellow */
-.highlight .sb { color: #e6db74 } /* Literal.String.Backtick light yellow */
-.highlight .sc { color: #e6db74 } /* Literal.String.Char light yellow */
-.highlight .dl { color: #e6db74 } /* Literal.String.Delimiter light yellow */
-.highlight .sd { color: #e6db74 } /* Literal.String.Doc light yellow */
-.highlight .s2 { color: #e6db74 } /* Literal.String.Double light yellow */
-.highlight .se { color: #ae81ff } /* Literal.String.Escape light purple */
-.highlight .sh { color: #e6db74 } /* Literal.String.Heredoc light yellow */
-.highlight .si { color: #e6db74 } /* Literal.String.Interpol light yellow */
-.highlight .sx { color: #e6db74 } /* Literal.String.Other light yellow */
-.highlight .sr { color: #e6db74 } /* Literal.String.Regex light yellow */
-.highlight .s1 { color: #e6db74 } /* Literal.String.Single light yellow */
-.highlight .ss { color: #e6db74 } /* Literal.String.Symbol light yellow */
-.highlight .bp { color: #f8f8f2 } /* Name.Builtin.Pseudo basically white */
-.highlight .fm { color: #51bcff } /* Name.Function.Magic neon green */
-.highlight .vc { color: #f8f8f2 } /* Name.Variable.Class basically white */
-.highlight .vg { color: #f8f8f2 } /* Name.Variable.Global basically white */
-.highlight .vi { color: #f8f8f2 } /* Name.Variable.Instance basically white */
-.highlight .vm { color: #f8f8f2 } /* Name.Variable.Magic basically white */
-.highlight .il { color: #ae81ff } /* Literal.Number.Integer.Long light purple */
+
+/* Tomorrow Night Eighties Theme */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+.tomorrow-comment, pre .comment, pre .title {
+  color: #999999;
+}
+
+.tomorrow-red, pre .variable, pre .attribute, pre .tag, pre .regexp, pre .ruby .constant, pre .xml .tag .title, pre .xml .pi, pre .xml .doctype, pre .html .doctype, pre .css .id, pre .css .class, pre .css .pseudo {
+  color: #f2777a;
+}
+
+.tomorrow-orange, pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+  color: #f99157;
+}
+
+.tomorrow-yellow, pre .class, pre .ruby .class .title, pre .css .rules .attribute {
+  color: #ffcc66;
+}
+
+.tomorrow-green, pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+  color: #99cc99;
+}
+
+.tomorrow-aqua, pre .css .hexcolor {
+  color: #66cccc;
+}
+
+.tomorrow-blue, pre .function, pre .python .decorator, pre .python .title, pre .ruby .function .title, pre .ruby .title .keyword, pre .perl .sub, pre .javascript .title, pre .coffeescript .title {
+  color: #6699cc;
+}
+
+.tomorrow-purple, pre .keyword, pre .javascript .function {
+  color: #cc99cc;
+}
+
+pre code {
+  display: block;
+  background: #2d2d2d;
+  color: #cccccc;
+  font-family: Menlo, Monaco, Consolas, monospace;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  padding: 10px;
+}

@@ -6,7 +6,7 @@ title: About
 
 Test syntax highlighting.
 
-{% highlight python%}
+{% highlight python %}
 
 import copy
 
