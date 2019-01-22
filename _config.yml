@@ -43,3 +43,5 @@ plugins:
   - jekyll-gist
   - jekyll-coffeescript
   - jekyll-assets
+
+theme: jekyll-theme-slate
