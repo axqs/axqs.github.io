@@ -171,7 +171,8 @@ figure.highlight {
   border-style: inset; }
 
 .highlight .c {
-  color: #8D8D8D; }
+  color: #8D8D8D;
+  font-style: italic; }
 
 /* Comment light grey */
 .highlight .err {
@@ -201,29 +202,35 @@ figure.highlight {
 
 /* Punctuation basically white */
 .highlight .ch {
-  color: #8D8D8D; }
+  color: #8D8D8D;
+  font-style: italic; }
 
-/* Comment.Hashbang light green/grey */
+/* Comment.Hashbang light grey */
 .highlight .cm {
-  color: #8D8D8D; }
+  color: #8D8D8D;
+  font-style: italic; }
 
-/* Comment.Multiline light green/grey */
+/* Comment.Multiline light grey */
 .highlight .cp {
-  color: #8D8D8D; }
+  color: #8D8D8D;
+  font-style: italic; }
 
-/* Comment.Preproc light green/grey */
+/* Comment.Preproc light grey */
 .highlight .cpf {
-  color: #8D8D8D; }
+  color: #8D8D8D;
+  font-style: italic; }
 
-/* Comment.PreprocFile light green/grey */
+/* Comment.PreprocFile light grey */
 .highlight .c1 {
-  color: #8D8D8D; }
+  color: #8D8D8D;
+  font-style: italic; }
 
-/* Comment.Single light green/grey */
+/* Comment.Single light grey */
 .highlight .cs {
-  color: #8D8D8D; }
+  color: #8D8D8D;
+  font-style: italic; }
 
-/* Comment.Special light green/grey */
+/* Comment.Special light grey */
 .highlight .gd {
   color: #f92672; }
 
@@ -241,9 +248,10 @@ figure.highlight {
 
 /* Generic.Strong */
 .highlight .gu {
-  color: #8D8D8D; }
+  color: #8D8D8D;
+  font-style: italic; }
 
-/* Generic.Subheading light green/grey */
+/* Generic.Subheading light grey */
 .highlight .kc {
   color: #D8A244; }
 

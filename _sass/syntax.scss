@@ -10,24 +10,48 @@ figure.highlight  {
   border-radius: 10px;
   border-style: inset;
  }
-.highlight .c { color: #8D8D8D } /* Comment light grey */
+.highlight .c {
+  color: #8D8D8D;
+  font-style: italic;
+} /* Comment light grey */
 .highlight .err { color: #960050; /* dark pink */ background-color: #1e0010 /* dark purple, almost black */} /* Error */
 .highlight .k { color: #9F79CB } /* Keyword purple */
 .highlight .l { color: #9F79CB } /* Literal light purple */
 .highlight .n { color: #C9C9C9 } /* Name basically white */
 .highlight .o { color: #C9C9C9 } /* Operator basically white */
 .highlight .p { color: #C9C9C9 } /* Punctuation basically white */
-.highlight .ch { color: #8D8D8D } /* Comment.Hashbang light green/grey */
-.highlight .cm { color: #8D8D8D } /* Comment.Multiline light green/grey */
-.highlight .cp { color: #8D8D8D } /* Comment.Preproc light green/grey */
-.highlight .cpf { color: #8D8D8D } /* Comment.PreprocFile light green/grey */
-.highlight .c1 { color: #8D8D8D } /* Comment.Single light green/grey */
-.highlight .cs { color: #8D8D8D } /* Comment.Special light green/grey */
+.highlight .ch {
+  color: #8D8D8D;
+  font-style: italic;
+} /* Comment.Hashbang light grey */
+.highlight .cm {
+  color: #8D8D8D;
+  font-style: italic;
+} /* Comment.Multiline light grey */
+.highlight .cp {
+  color: #8D8D8D;
+  font-style: italic;
+} /* Comment.Preproc light grey */
+.highlight .cpf {
+  color: #8D8D8D;
+  font-style: italic;
+} /* Comment.PreprocFile light grey */
+.highlight .c1 {
+  color: #8D8D8D;
+  font-style: italic;
+} /* Comment.Single light grey */
+.highlight .cs {
+  color: #8D8D8D;
+  font-style: italic;
+} /* Comment.Special light grey */
 .highlight .gd { color: #f92672 } /* Generic.Deleted neon pink */
 .highlight .ge { font-style: italic } /* Generic.Emph */
 .highlight .gi { color: #57ABE4 } /* Generic.Inserted blue*/
 .highlight .gs { font-weight: bold } /* Generic.Strong */
-.highlight .gu { color: #8D8D8D } /* Generic.Subheading light green/grey */
+.highlight .gu {
+  color: #8D8D8D;
+  font-style: italic;
+} /* Generic.Subheading light grey */
 .highlight .kc { color: #D8A244 } /* Keyword.Constant orange */
 .highlight .kd { color: #9F79CB } /* Keyword.Declaration purple */
 .highlight .kn { color: #9F79CB } /* Keyword.Namespace neon pink */
