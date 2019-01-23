@@ -4,7 +4,7 @@ title: About
 ---
 # About Me
 
-Test syntax highlighting.
+Test syntax highlighting with snippets of code from various projects.
 
 ### Header 3: With Python
 
