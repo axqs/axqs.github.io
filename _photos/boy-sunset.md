@@ -9,5 +9,6 @@ camera: Canon Rebel t3i
 location: Death Valley National Park
 lens: Canon EF 40mm f/2.8 STM
 settings: ISO 100 f/2.8 1/1600
+subject: axel
 ---
 I took this at Death Valley!

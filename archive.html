@@ -2,7 +2,9 @@
 layout: default
 title: Archive
 ---
-<h1>Photos</h1>
+{% assign numPhotos = site.photos.size %}
+{% assign numPosts = site.posts.size %}
+<h1>Photos - {{ numPhotos }}</h1>
 
 <ul class="archive">
   {% assign sorted = site.photos | sort:'number' | reverse %}
@@ -14,7 +16,7 @@ title: Archive
   {% endfor %}
 </ul>
 
-<h1>Posts</h1>
+<h1>Posts - {{ numPosts }}</h1>
 
 <ul class="archive">
   {% for post in site.posts %}

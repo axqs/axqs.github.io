@@ -10,7 +10,7 @@ collections:
     output: true
   photos:
     output: true
-  topphotos:
+  subjects:
     output: true
 
 defaults:
@@ -21,9 +21,9 @@ defaults:
       layout: "photo"
   - scope:
       path: ""
-      type: "topphotos"
+      type: "subjects"
     values:
-      layout: "photo"
+      layout: "subject"
   - scope:
       path: ""
       type: "authors"

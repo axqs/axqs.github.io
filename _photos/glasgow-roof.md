@@ -9,5 +9,6 @@ camera: Canon Rebel t3i
 location: West End, Glasgow UK
 lens: Canon EF 40mm f/2.8 STM
 settings: ISO 1600 f/8 1/500
+subject: land
 ---
 I took this from my bedroom window in Glasgow!

@@ -16,13 +16,32 @@ title: Home
   {% endfor %}
 </div>
 
-<h1>Photo Catagories</h1>
+<!-- <h1>Posts/h1>
 
 <ul class="blog">
   {% for post in site.posts %}
     <li>
       <h3><a class="post" href="{{ post.url }}">{{ post.title }}</a></h3>
       <p>{{ post.excerpt }}</p>
+    </li>
+  {% endfor %}
+</ul> -->
+
+<h1>Photo Categories</h1>
+
+<ul class="blog">
+  {% for subject in site.subjects %}
+    <li>
+      <h3><a class="post" href="{{ subject.url }}">{{ subject.name }}</a></h3>
+    </li>
+  {% endfor %}
+</ul>
+
+<h1>Test</h1>
+<ul class="blog">
+  {% for subject in site.subjects %}
+    <li>
+      <h3><a class="post" href="{{ subject.url }}">{{ subject.name }}</a></h3>
     </li>
   {% endfor %}
 </ul>

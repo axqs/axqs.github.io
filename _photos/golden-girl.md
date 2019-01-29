@@ -9,5 +9,6 @@ camera: Canon Rebel t3i
 location: Ashton Lane, Glasgow UK
 lens: Canon EF 40mm f/2.8 STM
 settings: ISO 1600 f/2.8 1/50
+subject: erin_j
 ---
 I took this in Ashton Lane!

@@ -9,5 +9,6 @@ camera: Canon Rebel t3i
 location: Santa Monica Pier
 lens: Canon EF 40mm f2.8 STM
 settings: ISO 100 f/16 1/80
+subject: land
 ---
 I took this at Santa Monica Pier!
