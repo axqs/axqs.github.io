@@ -9,6 +9,6 @@ camera: Canon Rebel t3i
 location: Scottish Highlands
 lens: Canon EF 40mm f/2.8 STM
 settings: ISO 100 f/4.5 1/800
-subject: land
+subject: nature
 ---
 I took this in the Scottish highlands!

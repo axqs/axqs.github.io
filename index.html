@@ -25,7 +25,7 @@ title: Home
       <p>{{ post.excerpt }}</p>
     </li>
   {% endfor %}
-</ul> -->
+</ul>
 
 <h1>Photo Categories</h1>
 
@@ -36,12 +36,39 @@ title: Home
     </li>
   {% endfor %}
 </ul>
+-->
 
-<h1>Test</h1>
+<h1>Photo Categories</h1>
 <ul class="blog">
-  {% for subject in site.subjects %}
+  {% assign sorted = site.subjects | group_by:'type'%}
+  {% for subject in sorted %}
     <li>
-      <h3><a class="post" href="{{ subject.url }}">{{ subject.name }}</a></h3>
+      <button class="accordion">{{ subject.name | capitalize | append:'s' }}</button>
+      <div class="panel">
+        {% for sub in site.subjects%}
+          {% if sub.type == subject.name %}
+              <a class="panel" href="{{ sub.url }}">{{ sub.name }}</a>
+              <br>
+          {% endif %}
+        {% endfor %}
+      </div>
     </li>
   {% endfor %}
 </ul>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+</script>

@@ -9,6 +9,6 @@ camera: Canon Rebel t3i
 location: Venice Beach, CA
 lens: Canon EF 40mm f/2.8 STM
 settings: ISO 160 f/5.6 1/80
-subject: land
+subject: nature
 ---
 It's not a painting. I promise!

@@ -9,6 +9,6 @@ camera: Canon Rebel t3i
 location: Sunken City, San Pedro
 lens: Tamron AF 18-270mm f/3.5-6.3 Di II VC PZD
 settings: ISO 320 18mm f/5.6 1/40
-subject: land
+subject: beach
 ---
 I took this in San Pedro!

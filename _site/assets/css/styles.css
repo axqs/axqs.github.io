@@ -143,6 +143,34 @@ img.img-post {
   width: 40%;
   margin: 1%; }
 
+button.accordion {
+  background-color: whitesmoke;
+  color: dimgrey;
+  border-style: hidden;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold; }
+
+button.active, button.accordion:hover {
+  color: darkred; }
+
+div.panel {
+  padding-left: 2%;
+  background-color: whitesmoke;
+  color: yellow;
+  display: none; }
+
+a.panel:link, a.panel:visited {
+  font-size: 18px;
+  text-decoration: none;
+  color: dimgrey;
+  font-family: sans-serif; }
+
+a.panel:hover, a.panel:active {
+  color: darkred; }
+
 footer {
   clear: both;
   border-top: 4px solid midnightblue;

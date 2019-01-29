@@ -1,9 +1,11 @@
+//general
 html {
 	background-color: whitesmoke;
 	padding-left: 10%;
 	padding-right: 10%;
 	padding-bottom: 3%;
 }
+//header
 header.nav-bar {
 	background-color: silver;
 	padding-bottom: 44px;
@@ -11,7 +13,7 @@ header.nav-bar {
 	padding-left: 10px;
 	padding-right: 10px;
 }
-
+//photo page
 img.one-photo {
   display: block;
   margin: auto;
@@ -23,7 +25,7 @@ div.photo-meta {
   text-align: right;
   padding-bottom: 1.5%;
 }
-
+//photo grid
 * {
 	box-sizing: border-box;
 }
@@ -57,7 +59,7 @@ div.column img:hover {
     max-width: 100%;
   }
 }
-
+//general text
 h1 {
   line-height: 70%;
   font-size: 25px;
@@ -81,14 +83,14 @@ p {
 	font-family: monospace;
 	font-size: 13px;
 }
-
+//bio on subject page
 div.bio {
   padding-bottom: 2%;
   padding-left: 1%;
   padding-right: 1%;
 	font-family: monospace;
 }
-
+//list for staff
 ul.staff {
 	padding-left: 20px;
 	list-style-type: none;
@@ -97,13 +99,13 @@ ul.staff li{
 	padding-left: 10px;
 	border-left: 5px double firebrick;
 }
-
+//list for archive
 ul.archive {
 	font-size: 15px;
 	list-style-type: square;
   line-height: 44%;
 }
-
+//navbar heading
 a.current {
 	float: right;
 	font-family: monospace;
@@ -115,7 +117,8 @@ a.current {
 	background-color: slategrey;
 	border: 2px solid slategrey;
 }
-
+//links
+//navigation
 a.nav:link, a.nav:visited {
 	float: right;
 	font-family: monospace;
@@ -131,7 +134,7 @@ a.nav:hover, a.nav:active {
 	border: 2px solid black;
 	color: white;
 }
-
+//post/photo
 a.post:link, a.post:visited {
 	font-family: sans-serif;
 	color: dimgrey;
@@ -141,7 +144,7 @@ a.post:hover, a.post:active {
 	color: darkred;
 	cursor: pointer;
 }
-
+//staff members
 a.staff:link, a.staff:visited {
 	font-family: sans-serif;
 	color: darkgreen;
@@ -151,14 +154,43 @@ a.staff:hover, a.staff:active {
 	color: goldenrod;
 	cursor: pointer;
 }
-
+//photo in grid
 img.img-post {
   display: block;
   vertical-align: middle;
   width: 40%;
   margin: 1%;
 }
-
+//photo categories accordion
+button.accordion {
+  background-color: whitesmoke;
+  color: dimgrey;
+  border-style: hidden;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+button.active, button.accordion:hover{
+  color: darkred;
+}
+div.panel {
+  padding-left: 2%;
+  background-color: whitesmoke;
+  color: yellow;
+  display: none;
+}
+a.panel:link, a.panel:visited {
+  font-size: 18px;
+  text-decoration: none;
+  color: dimgrey;
+  font-family: sans-serif;
+}
+a.panel:hover, a.panel:active {
+  color: darkred;
+}
+//footer navigation
 footer {
 	clear: both;
 	border-top: 4px solid midnightblue;

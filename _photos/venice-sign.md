@@ -9,6 +9,6 @@ camera: Canon Rebel t3i
 location: Venice Beach, CA
 lens: Tamron AF 18-270mm f/3.5-6.3 Di II VC PZD
 settings: ISO 200 33mm f/4 1/1600
-subject: land
+subject: street
 ---
 I took this on Venice Beach!
