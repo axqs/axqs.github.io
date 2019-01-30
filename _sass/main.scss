@@ -154,6 +154,16 @@ a.staff:hover, a.staff:active {
 	color: goldenrod;
 	cursor: pointer;
 }
+//general
+a.ref:link, a.ref:visited {
+	font-family: monospace;
+	color: darkred;
+	text-decoration: none;
+}
+a.ref:hover, a.ref:active {
+  color: dimgrey;
+  cursor: pointer;
+}
 //photo in grid
 img.img-post {
   display: block;
