@@ -4,7 +4,6 @@ html {
 	padding-left: 5%;
 	padding-right: 5%;
 	padding-bottom: 3%;
-	letter-spacing: 2px;
 }
 //header
 header.nav-bar {
@@ -13,7 +12,8 @@ header.nav-bar {
 	padding-top: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
-
+}
+a.nav {
 	float: right;
 	font-family: monospace;
 	text-align: center;
