@@ -1,7 +1,7 @@
 #- name: Staff
 #  link: /staff.html
-- name: More
-  link: /photos.html
+- name: Subjects
+  link: /subjects.html
 #- name: Blog
 #  link: /blog.html
 - name: Bio

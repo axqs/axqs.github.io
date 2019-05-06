@@ -24,8 +24,7 @@ h1.intro {
 
 p {
   font-weight: normal;
-  font-family: "Lucida Console", Monaco, monospace;
-  font-size: 13px; }
+  font-family: "Lucida Console", Monaco, monospace; }
 
 header {
   padding-top: 1%; }
@@ -125,7 +124,7 @@ a.post:hover, a.post:active {
   cursor: pointer; }
 
 a.staff:link, a.staff:visited {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-family: "Lucida Console", Monaco, monospace;
   color: darkgreen;
   text-decoration: none; }
 
@@ -171,12 +170,12 @@ a.panel:hover, a.panel:active {
   color: darkred; }
 
 footer {
+  font-size: 15px;
   clear: both;
   border-top: 4px solid midnightblue;
   padding-top: 10px; }
 
 a.footer:link, a.footer:visited {
-  font-size: 15px;
   padding-right: 10px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-weight: bold;

@@ -3,9 +3,9 @@ layout: default
 ---
 <h1>{{ page.title }}</h1>
 {% assign author = site.authors | where: 'short_name', page.author | first %}
-<p>{{ page.date-taken }} - <a class="staff" style="font-family: monospace; font-size: 13px;" href="{{ author.url }}">{{ author.name }}</a></p>
+<p>{{ page.date-taken }} - <a class="staff" href="{{ author.url }}">{{ author.name }}</a></p>
 {% assign subject = site.subjects | where: 'subject', page.subject | first %}
-<p>Subject: <a class="staff" style="font-family: monospace; font-size: 13px;" href="{{ subject.url }}">{{ subject.name }}</a></p>
+<p>Subject: <a class="staff" href="{{ subject.url }}">{{ subject.name }}</a></p>
 
 <img class="one-photo" src="/assets/photos/{{ page.imgPath }}" alt="{{ page.alt }}">
 
