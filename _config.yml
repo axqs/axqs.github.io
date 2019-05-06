@@ -44,4 +44,5 @@ plugins:
   - jekyll-coffeescript
   - jekyll-assets
 
-#theme: jekyll-theme-slate
+exclude:
+  - node_modules
