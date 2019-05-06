@@ -1,29 +1,30 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-  </head>
-  <body>
-    <header class="nav-bar">
-      {% include navigation.html %}
-    </header>
-    {{ content }}
-    <footer>
-      {% assign foot = site.data.footer %}
-      {% for item in foot %}
-        {% if item == foot.last %}
-          <a class="footer" href="{{ item.link }}">
-      			{{ item.name }}
-      		</a>
-        {% else %}
-      		<a class="footer" href="{{ item.link }}" target="_blank">
-      			{{ item.name }}
-      		</a>
-        {% endif %}
-    	{% endfor %}
-		<span style="float:right; font-family:monospace;"> Q Smart    Copyright &copy;2019    All rights reserved</span>
-    </footer>
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<title>{{ page.title }}</title>
+		<link rel="stylesheet" href="/assets/css/styles.css">
+	</head>
+	<body>
+		<header class="nav-bar">
+			<a style="float:left;" href="/index.html"><img src="/assets/photos/site-logo.png" alt="website logo" style="height:70px;"></a>
+			{% include navigation.html %}
+		</header>
+		{{ content }}
+		<footer>
+			{% assign foot = site.data.footer %}
+			{% for item in foot %}
+			{% if item == foot.last %}
+			<a class="footer" href="{{ item.link }}">
+				{{ item.name }}
+			</a>
+			{% else %}
+			<a class="footer" href="{{ item.link }}" target="_blank">
+				{{ item.name }}
+			</a>
+			{% endif %}
+			{% endfor %}
+			<span style="float:right; font-family:monospace;"> Q Smart    Copyright &copy;2019    All rights reserved</span>
+		</footer>
+	</body>
 </html>

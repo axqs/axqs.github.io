@@ -1,27 +1,33 @@
 ---
 layout: default
-title: Photo Gallery
+title: More
 ---
-<h1>Photo Gallery</h1>
+<h1>Subjects</h1>
+<ul class="blog">
+	{% for subject in site.subjects %}
+	<li>
+		<h3><a class="post" href="{{ subject.url }}">{{ subject.name }}</a></h3>
+	</li>
+	{% endfor %}
+</ul>
+<!--
+<h1>Styles</h1>
+<ul class="blog">
+	{% assign sorted = site.subjects | group_by:'type'%}
+	{% for subject in sorted %}
+	<li>
+		<button class="accordion">{{ subject.name | capitalize | append:'s' }}</button>
+		<div class="panel">
+			{% for sub in site.subjects%}
+				{% if sub.type == subject.name %}
+					<a class="panel" href="{{ sub.url }}">{{ sub.name }}</a>
+					<br>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</li>
+	{% endfor %}
+</ul>
 
-<div class="row">
-  {% assign shuffled = site.photos | shuffle %}
-  {% assign len = shuffled.size %}
-  {% assign cols = 4 %}
-  {% assign lines = shuffled.size | divided_by:cols %}
-
-  {% assign start = 0 %}
-  {% for i in (0..lines) %}
-    <div class="column">
-      {% assign offset = start | plus:cols | minus:1 %}
-      {% if offset >= len %}
-        {% assign offset = len | minus:1 %}
-      {% endif %}
-      {% for k in (start..offset) %}
-        <a href="{{ shuffled[k].url }}">
-        <img src="/assets/photos/{{ shuffled[k].imgPath }}" alt="{{ shuffled[k].alt }}" style="width:100%"></a>
-      {% endfor %}
-    </div>
-    {% assign start = start | plus:cols %}
-  {% endfor %}
-</div>
+<script src="/assets/scripts/accordion.js" charset="utf-8"></script>
+-->

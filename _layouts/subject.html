@@ -3,14 +3,13 @@ layout: default
 ---
 <h1>{{ page.name }}</h1>
 
-<div class="row">
-  {% assign sorted = site.photos | where: 'subject', page.subject %}
-  {% for photo in sorted %}
-    <div class="column">
-        <a href="{{ photo.url }}">
-        <img src="/assets/photos/{{ photo.imgPath }}" alt="{{ photo.alt }}" style="width:100%"></a>
-    </div>
-  {% endfor %}
+<div class="grid-row">
+	{% assign sorted = site.photos | where: 'subject', page.subject %}
+	{% for photo in sorted %}
+	<div>
+		<a href="{{ photo.url }}"><img src="/assets/photos/{{ photo.imgPath }}" alt="{{ photo.alt }}" style="width:100%"></a>
+	</div>
+	{% endfor %}
 </div>
 
 {{ content }}

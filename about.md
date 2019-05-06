@@ -1,8 +1,8 @@
 ---
 layout: default
-title: About
+title: Bio
 ---
-# About Me
+# Bio
 
 Test syntax highlighting with snippets of code from various projects.
 

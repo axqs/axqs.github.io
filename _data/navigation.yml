@@ -1,10 +1,10 @@
 #- name: Staff
 #  link: /staff.html
-- name: Photo Gallery
+- name: More
   link: /photos.html
 #- name: Blog
 #  link: /blog.html
-- name: About
+- name: Bio
   link: /about.html
-- name: Home
+- name: Work
   link: /

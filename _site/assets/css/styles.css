@@ -1,84 +1,107 @@
 html {
   background-color: whitesmoke;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
   padding-bottom: 3%; }
 
-header.nav-bar {
-  background-color: silver;
-  padding-bottom: 44px;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px; }
+h1 {
+  font-size: 25px;
+  clear: both;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  border-bottom: 4px solid midnightblue;
+  padding-bottom: 8px;
+  padding-top: 10px; }
+
+h2, h3, h4, h5, h6 {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  line-height: 1%; }
+
+h1.intro {
+  padding-top: 3%;
+  border-bottom: 0px;
+  font-family: "Lucida Console", Monaco, monospace;
+  text-align: center; }
+
+p {
+  font-weight: normal;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 13px; }
+
+header {
+  padding-top: 1%; }
+
+header a {
+  float: right;
+  font-family: "Lucida Console", Monaco, monospace;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px 10px 0px 10px;
+  color: black;
+  border: 2px hidden black; }
+
+a.current {
+  border-style: solid;
+  padding: 8px 3%; }
+
+a.nav:link, a.nav:visited {
+  padding: 8px 3%; }
+
+a.nav:hover, a.nav:active {
+  background-color: black;
+  color: white; }
 
 img.one-photo {
   display: block;
   margin: auto;
   padding-bottom: 2%;
-  width: 70%; }
+  width: 80%; }
 
 div.photo-meta {
-  font-family: monospace;
+  font-family: "Lucida Console", Monaco, monospace;
   text-align: right;
   padding-bottom: 1.5%; }
 
-* {
-  box-sizing: border-box; }
+div.grid-row {
+  line-height: 10px;
+  -webkit-column-count: 5;
+  -webkit-column-gap: 7px;
+  -moz-column-count: 5;
+  -moz-column-gap: 7px;
+  column-count: 5;
+  column-gap: 7px; }
 
-div.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-  padding-bottom: 3%; }
+div.grid-row img {
+  padding-bottom: 7px;
+  width: 100%;
+  height: auto; }
 
-div.column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px; }
+div.grid-row img:hover {
+  opacity: 0.6; }
 
-div.column img {
-  margin-top: 8px;
-  vertical-align: middle; }
-
-div.column img:hover {
-  opacity: 0.60; }
-
-@media screen and (max-width: 800px) {
-  div.column {
-    flex: 50%;
-    max-width: 50%; } }
-@media screen and (max-width: 600px) {
-  div.column {
-    flex: 100%;
-    max-width: 100%; } }
-h1 {
-  line-height: 70%;
-  font-size: 25px;
-  clear: right;
-  font-family: sans-serif;
-  border-bottom: 4px solid midnightblue;
-  padding-bottom: 8px; }
-
-h2, h3, h4, h5, h6 {
-  line-height: 2%;
-  font-family: sans-serif; }
-
-h1.intro {
-  padding-top: 3%;
-  border-bottom: 0px;
-  font-family: monospace;
-  text-align: center; }
-
-p {
-  font-weight: normal;
-  font-family: monospace;
-  font-size: 13px; }
+@media (max-width: 1100px) {
+  div.grid-row {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4; } }
+@media (max-width: 900px) {
+  div.grid-row {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2; } }
+@media (max-width: 700px) {
+  div.grid-row {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1; } }
+div.columns {
+  display: grid;
+  grid-template-columns: auto auto; }
 
 div.bio {
   padding-bottom: 2%;
   padding-left: 1%;
   padding-right: 1%;
-  font-family: monospace; }
+  font-family: "Lucida Console", Monaco, monospace; }
 
 ul.staff {
   padding-left: 20px;
@@ -90,37 +113,10 @@ ul.staff li {
 
 ul.archive {
   font-size: 15px;
-  list-style-type: square;
-  line-height: 44%; }
-
-a.current {
-  float: right;
-  font-family: monospace;
-  color: white;
-  padding: 8px 3%;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  background-color: slategrey;
-  border: 2px solid slategrey; }
-
-a.nav:link, a.nav:visited {
-  float: right;
-  font-family: monospace;
-  background-color: white;
-  color: black;
-  border: 2px solid slategrey;
-  padding: 8px 3%;
-  text-align: center;
-  text-decoration: none; }
-
-a.nav:hover, a.nav:active {
-  background-color: black;
-  border: 2px solid black;
-  color: white; }
+  list-style-type: square; }
 
 a.post:link, a.post:visited {
-  font-family: sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color: dimgrey;
   text-decoration: none; }
 
@@ -129,7 +125,7 @@ a.post:hover, a.post:active {
   cursor: pointer; }
 
 a.staff:link, a.staff:visited {
-  font-family: sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color: darkgreen;
   text-decoration: none; }
 
@@ -138,19 +134,13 @@ a.staff:hover, a.staff:active {
   cursor: pointer; }
 
 a.ref:link, a.ref:visited {
-  font-family: monospace;
+  font-family: "Lucida Console", Monaco, monospace;
   color: darkred;
   text-decoration: none; }
 
 a.ref:hover, a.ref:active {
   color: dimgrey;
   cursor: pointer; }
-
-img.img-post {
-  display: block;
-  vertical-align: middle;
-  width: 40%;
-  margin: 1%; }
 
 button.accordion {
   background-color: whitesmoke;
@@ -175,7 +165,7 @@ a.panel:link, a.panel:visited {
   font-size: 18px;
   text-decoration: none;
   color: dimgrey;
-  font-family: sans-serif; }
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
 
 a.panel:hover, a.panel:active {
   color: darkred; }
@@ -188,7 +178,7 @@ footer {
 a.footer:link, a.footer:visited {
   font-size: 15px;
   padding-right: 10px;
-  font-family: sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-weight: bold;
   color: plum;
   text-decoration: none; }

@@ -1,23 +1,28 @@
 ---
 layout: default
 ---
-<h1>{{ page.name }}</h1>
-<h3>{{ page.position }}</h3>
+<h1>{{ page.name }} - {{ page.position }}</h1>
 
 {{ content }}
 
-<h3>Posts</h3>
-<ul class="blog">
-	{% assign filtered_posts = site.posts | where: 'author', page.short_name %}
-	{% for post in filtered_posts %}
-		<li><a class="post" href="{{ post.url }}">{{ post.title }}</a></li>
-	{% endfor %}
-</ul>
+<div class="columns">
+	<div>
+		<h3>Photos</h3>
+		<ul>
+			{% assign filtered_posts = site.photos | where: 'author', page.short_name %}
+			{% for post in filtered_posts %}
+				<li><a class="post" href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
 
-<h3>Photos</h3>
-<ul>
-	{% assign filtered_posts = site.photos | where: 'author', page.short_name %}
-	{% for post in filtered_posts %}
-		<li><a class="post" href="{{ post.url }}">{{ post.title }}</a></li>
-	{% endfor %}
-</ul>
+	<div>
+		<h3>Posts</h3>
+		<ul class="blog">
+			{% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+			{% for post in filtered_posts %}
+				<li><a class="post" href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
