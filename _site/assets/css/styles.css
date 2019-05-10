@@ -53,7 +53,7 @@ img.one-photo {
   display: block;
   margin: auto;
   padding-bottom: 2%;
-  width: 80%; }
+  width: 85%; }
 
 div.photo-meta {
   font-family: "Lucida Console", Monaco, monospace;
@@ -62,11 +62,11 @@ div.photo-meta {
 
 div.grid-row {
   line-height: 10px;
-  -webkit-column-count: 5;
+  -webkit-column-count: 4;
   -webkit-column-gap: 7px;
-  -moz-column-count: 5;
+  -moz-column-count: 4;
   -moz-column-gap: 7px;
-  column-count: 5;
+  column-count: 4;
   column-gap: 7px; }
 
 div.grid-row img {
@@ -77,17 +77,17 @@ div.grid-row img {
 div.grid-row img:hover {
   opacity: 0.6; }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1300px) {
   div.grid-row {
-    -moz-column-count: 4;
-    -webkit-column-count: 4;
-    column-count: 4; } }
-@media screen and (max-width: 900px) {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3; } }
+@media screen and (max-width: 1000px) {
   div.grid-row {
     -moz-column-count: 2;
     -webkit-column-count: 2;
     column-count: 2; } }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   div.grid-row {
     -moz-column-count: 1;
     -webkit-column-count: 1;
@@ -131,6 +131,29 @@ a.staff:link, a.staff:visited {
 a.staff:hover, a.staff:active {
   color: goldenrod;
   cursor: pointer; }
+
+div.contact {
+  float: right;
+  margin-left: 20px;
+  padding-left: 10px;
+  padding-right: 130px;
+  margin-bottom: 20px;
+  border-left: 7px solid darkred; }
+
+div.contact a {
+  color: black;
+  font-family: "Lucida Console", Monaco, monospace; }
+
+div.contact a:hover {
+  color: darkred;
+  text-decoration: none; }
+
+a.inline {
+  color: black; }
+
+a.inline:hover {
+  color: darkred;
+  text-decoration: none; }
 
 a.ref:link, a.ref:visited {
   font-family: "Lucida Console", Monaco, monospace;
