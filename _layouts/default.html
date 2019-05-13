@@ -4,25 +4,18 @@
 		<meta charset="utf-8">
 		<title>{{ page.title }}</title>
 		<link rel="stylesheet" href="/assets/css/styles.css">
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 	</head>
 	<body>
 		<header class="nav-bar">
-			<a style="float:left;" href="/index.html"><img src="/assets/photos/site-logo.png" alt="website logo" style="height:70px;"></a>
+			<a style="float:left;" href="/index.html"><img src="/assets/photos/logo.jpg" alt="website logo" style="height:70px;"></a>
 			{% include navigation.html %}
 		</header>
 		{{ content }}
 		<footer>
 			{% assign foot = site.data.footer %}
-			{% for item in foot %}
-			{% if item == foot.last %}
-			<a class="footer" href="{{ item.link }}">
-				{{ item.name }}
-			</a>
-			{% else %}
-			<a class="footer" href="{{ item.link }}" target="_blank">
-				{{ item.name }}
-			</a>
-			{% endif %}
+			{% for item in site.data.footer %}
+				<a class="footer" href="{{ item.link }}" target="_blank">{{ item.name }}</a>
 			{% endfor %}
 		</footer>
 	</body>

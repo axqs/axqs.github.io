@@ -2,40 +2,35 @@ html {
   background-color: whitesmoke;
   padding-left: 5%;
   padding-right: 5%;
-  padding-bottom: 3%; }
+  padding-bottom: 3%;
+  font-weight: 100; }
+
+body {
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: black; }
+
+a {
+  color: black; }
 
 h1 {
-  font-size: 25px;
+  font-weight: 100;
   clear: both;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   border-bottom: 4px solid midnightblue;
   padding-bottom: 8px;
   padding-top: 10px; }
 
 h2, h3, h4, h5, h6 {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  line-height: 1%; }
-
-h1.intro {
-  padding-top: 3%;
-  border-bottom: 0px;
-  font-family: "Lucida Console", Monaco, monospace;
-  text-align: center; }
-
-p {
-  font-weight: normal;
-  font-family: "Lucida Console", Monaco, monospace; }
+  line-height: 1%;
+  font-weight: 100; }
 
 header {
   padding-top: 1%; }
 
 header a {
   float: right;
-  font-family: "Lucida Console", Monaco, monospace;
   text-align: center;
   text-decoration: none;
   margin: 0px 10px 0px 10px;
-  color: black;
   border: 2px hidden black; }
 
 a.current {
@@ -48,17 +43,6 @@ a.nav:link, a.nav:visited {
 a.nav:hover, a.nav:active {
   background-color: black;
   color: white; }
-
-img.one-photo {
-  display: block;
-  margin: auto;
-  padding-bottom: 2%;
-  width: 85%; }
-
-div.photo-meta {
-  font-family: "Lucida Console", Monaco, monospace;
-  text-align: right;
-  padding-bottom: 1.5%; }
 
 div.grid-row {
   line-height: 10px;
@@ -73,9 +57,6 @@ div.grid-row img {
   padding-bottom: 7px;
   width: 100%;
   height: auto; }
-
-div.grid-row img:hover {
-  opacity: 0.6; }
 
 @media screen and (max-width: 1300px) {
   div.grid-row {
@@ -92,46 +73,6 @@ div.grid-row img:hover {
     -moz-column-count: 1;
     -webkit-column-count: 1;
     column-count: 1; } }
-div.columns {
-  display: grid;
-  grid-template-columns: auto auto; }
-
-div.bio {
-  padding-bottom: 2%;
-  padding-left: 1%;
-  padding-right: 1%;
-  font-family: "Lucida Console", Monaco, monospace; }
-
-ul.staff {
-  padding-left: 20px;
-  list-style-type: none; }
-
-ul.staff li {
-  padding-left: 10px;
-  border-left: 5px double firebrick; }
-
-ul.archive {
-  font-size: 15px;
-  list-style-type: square; }
-
-a.post:link, a.post:visited {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  color: dimgrey;
-  text-decoration: none; }
-
-a.post:hover, a.post:active {
-  color: darkred;
-  cursor: pointer; }
-
-a.staff:link, a.staff:visited {
-  font-family: "Lucida Console", Monaco, monospace;
-  color: darkgreen;
-  text-decoration: none; }
-
-a.staff:hover, a.staff:active {
-  color: goldenrod;
-  cursor: pointer; }
-
 div.contact {
   float: right;
   margin-left: 20px;
@@ -140,59 +81,16 @@ div.contact {
   margin-bottom: 20px;
   border-left: 7px solid darkred; }
 
-div.contact a {
-  color: black;
-  font-family: "Lucida Console", Monaco, monospace; }
-
 div.contact a:hover {
   color: darkred;
   text-decoration: none; }
-
-a.inline {
-  color: black; }
 
 a.inline:hover {
   color: darkred;
   text-decoration: none; }
 
-a.ref:link, a.ref:visited {
-  font-family: "Lucida Console", Monaco, monospace;
-  color: darkred;
-  text-decoration: none; }
-
-a.ref:hover, a.ref:active {
-  color: dimgrey;
-  cursor: pointer; }
-
-button.accordion {
-  background-color: whitesmoke;
-  color: dimgrey;
-  border-style: hidden;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-  font-size: 20px;
-  font-weight: bold; }
-
-button.active, button.accordion:hover {
-  color: darkred; }
-
-div.panel {
-  padding-left: 2%;
-  background-color: whitesmoke;
-  color: yellow;
-  display: none; }
-
-a.panel:link, a.panel:visited {
-  font-size: 18px;
-  text-decoration: none;
-  color: dimgrey;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
-
-a.panel:hover, a.panel:active {
-  color: darkred; }
-
 footer {
+  text-align: center;
   font-size: 15px;
   clear: both;
   border-top: 4px solid midnightblue;
@@ -200,7 +98,6 @@ footer {
 
 a.footer:link, a.footer:visited {
   padding-right: 10px;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-weight: bold;
   color: plum;
   text-decoration: none; }

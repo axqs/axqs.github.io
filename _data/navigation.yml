@@ -1,10 +1,4 @@
-#- name: Staff
-#  link: /staff.html
-- name: Subjects
-  link: /subjects.html
-#- name: Blog
-#  link: /blog.html
-- name: Bio
+- name: bio
   link: /about.html
-- name: Portfolio
+- name: portfolio
   link: /

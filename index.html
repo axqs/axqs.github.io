@@ -5,12 +5,15 @@ title: Portfolio
 <h1>Portfolio</h1>
 
 <div class="grid-row">
-  {% for photo in site.photos %}
-    <div class="grid-img">
-        <a href="{{ photo.url }}">
-        <img src="/assets/photos/{{ photo.imgPath }}" alt="{{ photo.alt }}" style="width:100%"></a>
-    </div>
-  {% endfor %}
+	{% for image in site.static_files %}
+		<div class="grid-img">
+		{% if image.path contains 'photos/' %}
+			{% unless image.path contains 'logo.jpg' %}
+				<img src="{{ site.baseurl }}{{ image.path }}" alt="image"/>
+			{% endunless %}
+		{% endif %}
+		</div>
+	{% endfor %}
 </div>
 
 <!--
