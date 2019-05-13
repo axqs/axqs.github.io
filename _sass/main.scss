@@ -8,6 +8,7 @@ body {
 	color: black;
 	width: 90%;
 	margin: auto;
+	letter-spacing: 0.1em;
 }
 a {
 	color: black;
@@ -22,7 +23,7 @@ h1 {
 	margin-bottom: 10px;
 	font-size: 3vw;
 	clear: both;
-	border-bottom: 4px solid midnightblue;
+	border-bottom: 0.3vw solid midnightblue;
 }
 p {
 	font-size: 1.3vw;
@@ -42,11 +43,11 @@ header a{
 	text-align: center;
 	text-decoration: none;
 	margin: 0px 10px 0px 10px;
-	border: 2px hidden black;
+	border: 1px hidden black;
 }
 a.current {
 	border-style: solid;
-	padding: 8px 3%;
+	padding: 0.5vw 2vw;
 }
 a.nav:link, a.nav:visited {
 	padding: 8px 3%;
@@ -143,16 +144,16 @@ a.inline:hover {
 }
 //footer navigation
 footer {
+	font-weight: 100;
 	margin-top: 10px;
 	text-align: center;
 	font-size: 1.3vw;
 	clear: both;
-	border-top: 4px solid midnightblue;
+	border-top: 0.3vw solid midnightblue;
 	padding: 10px;
 }
 a.footer:link, a.footer:visited {
 	padding-right: 10px;
-	font-weight: bold;
 	color: plum;
 	text-decoration: none;
 }
