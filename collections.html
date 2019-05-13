@@ -1,0 +1,21 @@
+---
+layout: default
+title: Collections
+---
+<h1>Collections</h1>
+{% for c in site.collections %}
+	{% capture photopath %}
+		{{ c.name }}/header
+	{% endcapture %}
+	{% assign photopath = photopath | strip %}
+	<div class="collection">
+		{% for image in site.static_files %}
+			{% if image.path contains photopath %}
+				<img class="header" src="{{ image.path }}" alt="image"/>
+			{% endif %}
+		{% endfor %}
+		<div class="image_text">
+			<a href="{{ c.url }}">{{ c.name | capitalize }}</a>
+		</div>
+	</div>
+{% endfor %}

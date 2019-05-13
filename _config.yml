@@ -6,34 +6,15 @@ kramdown:
   extensions: fenced_code_blocks
 
 collections:
-  authors:
-    output: true
-  photos:
-    output: true
-  subjects:
+  collections:
     output: true
 
 defaults:
   - scope:
       path: ""
-      type: "photos"
+      type: "collections"
     values:
-      layout: "photo"
-  - scope:
-      path: ""
-      type: "subjects"
-    values:
-      layout: "subject"
-  - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "author"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+      layout: "collection"
   - scope:
       path: ""
     values:

@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<h1>{{ page.name | capitalize }}</h1>
+
+{{ content }}
+
+<div class="grid-row">
+	{% for image in site.static_files %}
+		{% capture photopath %}
+			photos/{{ page.name }}
+		{% endcapture %}
+		{% assign photopath = photopath | strip %}
+		<div class="grid-img">
+		{% if image.path contains photopath %}
+			<img src="{{ site.baseurl }}{{ image.path }}" alt="image"/>
+		{% endif %}
+		</div>
+	{% endfor %}
+</div>

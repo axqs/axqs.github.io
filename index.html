@@ -7,7 +7,7 @@ title: Portfolio
 <div class="grid-row">
 	{% for image in site.static_files %}
 		<div class="grid-img">
-		{% if image.path contains 'photos/' %}
+		{% if image.path contains 'photos/portfolio' %}
 			{% unless image.path contains 'logo.jpg' %}
 				<img src="{{ site.baseurl }}{{ image.path }}" alt="image"/>
 			{% endunless %}
@@ -15,9 +15,3 @@ title: Portfolio
 		</div>
 	{% endfor %}
 </div>
-
-<!--
-	for code slots
-	{% highlight python %}
-	{% endhighlight %}
--->
