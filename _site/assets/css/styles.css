@@ -7,7 +7,7 @@ body {
   color: black;
   width: 90%;
   margin: auto;
-  letter-spacing: 0.1em; }
+  letter-spacing: 0.15em; }
 
 a {
   color: black; }
@@ -19,12 +19,12 @@ h1, h2, h3, h4, h5, p {
 
 h1 {
   margin-bottom: 10px;
-  font-size: 3vw;
+  font-size: 2.7vw;
   clear: both;
   border-bottom: 0.3vw solid midnightblue; }
 
 p {
-  font-size: 1.3vw; }
+  font-size: 1.1vw; }
 
 header {
   text-align: center; }
@@ -35,7 +35,7 @@ header img {
   padding-bottom: 20px; }
 
 header a {
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   transition: .4s ease;
   text-align: center;
   text-decoration: none;
@@ -88,6 +88,12 @@ img.header {
   width: 100%;
   transition: .4s ease; }
 
+img.header:active {
+  opacity: 0.5; }
+
+img.header:active div.image_text {
+  opacity: 1; }
+
 div.image_text {
   position: absolute;
   top: 0;
@@ -117,13 +123,16 @@ div.collection a {
   transform: translate(-50%, -50%);
   text-align: center; }
 
+div.collection a:hover {
+  color: darkred; }
+
 div.contact {
   float: right;
   margin-left: 20px;
   padding-left: 10px;
   padding-right: 130px;
   margin-bottom: 20px;
-  border-left: 1vw solid darkred;
+  border-left: .7vw solid darkred;
   font-size: 1.3vw; }
 
 div.contact a:hover {
@@ -138,7 +147,7 @@ footer {
   font-weight: 100;
   margin-top: 10px;
   text-align: center;
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   clear: both;
   border-top: 0.3vw solid midnightblue;
   padding: 10px; }
