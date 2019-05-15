@@ -128,7 +128,13 @@ div.collection a:hover {
 
 @media (hover: none) and (pointer: coarse) {
   div.image_text {
-    opacity: 1; } }
+    opacity: 1; }
+
+  div.collection:hover img.header {
+    opacity: 0.5; }
+
+  div.collection a {
+    text-decoration: underline; } }
 div.contact {
   float: right;
   margin-left: 20px;
