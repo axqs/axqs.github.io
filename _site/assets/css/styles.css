@@ -130,7 +130,7 @@ div.collection a:hover {
   div.image_text {
     opacity: 1; }
 
-  div.collection:hover img.header {
+  img.header {
     opacity: 0.5; }
 
   div.collection a {
