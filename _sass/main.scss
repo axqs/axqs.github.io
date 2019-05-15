@@ -26,7 +26,7 @@ h1 {
 	border-bottom: 0.3vw solid midnightblue;
 }
 p {
-	font-size: 1.1vw;
+	font-size: 1.3vw;
 }
 //header
 header {
@@ -38,7 +38,7 @@ header img {
 	padding-bottom: 20px;
 }
 header a{
-	font-size: 1.1vw;
+	font-size: 1.3vw;
 	transition: .4s ease;
 	text-align: center;
 	text-decoration: none;
@@ -90,16 +90,9 @@ div.collection {
 	margin-right: auto;
 }
 img.header {
-	z-index: 1;
 	display: block;
 	width: 100%;
 	transition: .4s ease;
-}
-img.header:active {
-	opacity: 0.5;
-}
-img.header:active div.image_text{
-	opacity: 1;
 }
 div.image_text{
 	position: absolute;
@@ -116,7 +109,7 @@ div.collection:hover div.image_text {
 	opacity: 1;
 }
 div.collection:hover img.header{
-	opacity: 0.5;
+	opacity: 0.7;
 }
 div.collection a{
 	color: black;
@@ -134,11 +127,11 @@ div.collection a:hover{
 	color: darkred;
 }
 @media (hover: none) and (pointer: coarse){
+	img.header{
+		opacity: 0.7;
+	}
 	div.image_text{
 		opacity: 1;
-	}
-	img.header{
-		opacity: 0.5;
 	}
 	div.collection a{
 		text-decoration: underline;
@@ -167,7 +160,7 @@ footer {
 	font-weight: 100;
 	margin-top: 10px;
 	text-align: center;
-	font-size: 1.1vw;
+	font-size: 1.3vw;
 	clear: both;
 	border-top: 0.3vw solid midnightblue;
 	padding: 10px;

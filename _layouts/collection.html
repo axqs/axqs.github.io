@@ -8,7 +8,7 @@ layout: default
 <div class="grid-row">
 	{% for image in site.static_files %}
 		{% capture photopath %}
-			photos/{{ page.name }}
+			{{ page.name }}
 		{% endcapture %}
 		{% assign photopath = photopath | strip %}
 		<div class="grid-img">
