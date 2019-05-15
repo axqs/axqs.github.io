@@ -106,10 +106,12 @@ div.image_text{
 	opacity: 0;
 	transition: .4s ease;
 }
-div.collection:hover div.image_text {
+div.collection:hover div.image_text,
+div.collection:active div.image_text {
 	opacity: 1;
 }
-div.collection:hover img.header {
+div.collection:hover img.header,
+ div.collection:active img.header {
 	opacity: 0.5;
 }
 div.collection a{
