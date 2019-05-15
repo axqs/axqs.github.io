@@ -126,6 +126,27 @@ div.collection a {
 div.collection a:hover {
   color: darkred; }
 
+@media (any-hover: none) {
+  div.image_text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; }
+
+  div.collection a {
+    color: black;
+    font-size: 4vw;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center; } }
 div.contact {
   float: right;
   margin-left: 20px;
