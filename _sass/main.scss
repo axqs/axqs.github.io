@@ -34,7 +34,7 @@ header {
 }
 header img {
 	padding-top: 20px;
-	width: 45%;
+	width: 35%;
 	padding-bottom: 20px;
 }
 header a{
@@ -133,27 +133,9 @@ div.collection a{
 div.collection a:hover{
 	color: darkred;
 }
-@media (any-hover: none) {
+@media (hover: none) and (pointer: coarse){
 	div.image_text{
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		height: 100%;
-		width: 100%;
-	}
-	div.collection a{
-		color: black;
-		font-size: 4vw;
-		text-decoration: none;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		-webkit-transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
-		text-align: center;
+		opacity: 1;
 	}
 }
 //bio links
