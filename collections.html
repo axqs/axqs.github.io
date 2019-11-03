@@ -2,12 +2,13 @@
 layout: default
 title: Collections
 ---
-<h1>Collections</h1>
+<h1>COLLECTIONS</h1>
 {% for c in site.collections %}
 	{% capture photopath %}
 		{{ c.name }}/header
 	{% endcapture %}
 	{% assign photopath = photopath | strip %}
+	<div class="grid-img">
 	<div class="collection">
 		{% for image in site.static_files %}
 			{% if image.path contains photopath %}
@@ -15,7 +16,8 @@ title: Collections
 			{% endif %}
 		{% endfor %}
 		<div class="image_text">
-			<a href="{{ c.url }}">{{ c.name | capitalize }}</a>
+			<a href="{{ c.url }}">{{ c.name | upcase }}</a>
 		</div>
+	</div>
 	</div>
 {% endfor %}

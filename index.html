@@ -2,15 +2,13 @@
 layout: default
 title: Portfolio
 ---
-<h1>Portfolio</h1>
+<h1>PORTFOLIO</h1>
 
 <div class="grid-row">
 	{% for image in site.static_files %}
 		<div class="grid-img">
 		{% if image.path contains 'photos/portfolio' %}
-			{% unless image.path contains 'logo.jpg' %}
-				<img src="{{ site.baseurl }}{{ image.path }}" alt="image"/>
-			{% endunless %}
+			<img src="{{ site.baseurl }}{{ image.path }}" alt="image"/>
 		{% endif %}
 		</div>
 	{% endfor %}

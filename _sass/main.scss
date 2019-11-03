@@ -4,7 +4,7 @@ html {
 	width: 100%;
 }
 body {
-	font-family: 'PT Sans Narrow', sans-serif;
+	font-family: 'Rajdhani', sans-serif;
 	color: black;
 	width: 90%;
 	margin: auto;
@@ -34,7 +34,7 @@ header {
 }
 header img {
 	padding-top: 20px;
-	width: 35%;
+	width: 30%;
 	padding-bottom: 20px;
 }
 header a{
@@ -126,7 +126,9 @@ div.collection a{
 div.collection a:hover{
 	color: darkred;
 }
-@media (hover: none) and (pointer: coarse){
+@media screen {
+	hover: none;
+	pointer: coarse;
 	img.header{
 		opacity: 0.7;
 	}
@@ -138,6 +140,12 @@ div.collection a:hover{
 	}
 }
 //bio links
+img.me{
+	padding-right: 15px;
+	padding-bottom: 15px;
+	float: left;
+	width: 50%;
+}
 div.contact{
 	float: right;
 	margin-left: 20px;
