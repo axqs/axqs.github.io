@@ -119,17 +119,12 @@ div.collection a {
 div.collection a:hover {
   color: darkred; }
 
-@media screen {
-  hover: none;
-  pointer: coarse;
-  img.header {
-    opacity: 0.7; }
-
-  div.image_text {
+@media screen and (max-width: 720px) {
+  div.collection div.image_text {
     opacity: 1; }
 
-  div.collection a {
-    text-decoration: underline; } }
+  div.collection img.header {
+    opacity: 0.7; } }
 img.me {
   padding-right: 15px;
   padding-bottom: 15px;

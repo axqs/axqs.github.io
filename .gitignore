@@ -8,4 +8,4 @@
 .buildlog/
 .history
 .svn/
-./sass-cache
+.sass-cache/
