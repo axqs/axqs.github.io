@@ -46,7 +46,7 @@ header a{
 	margin: 0px 15px 0px 15px;
 }
 a.current {
-	color: darkred
+	color: #77212E
 }
 a.nav:hover, a.nav:active {
 	color: darkgrey;
@@ -71,13 +71,6 @@ div.grid-row img{
 		-moz-column-count:    2;
 		-webkit-column-count: 2;
 		column-count:         2;
-	}
-}
-@media screen and (max-width: 720px) {
-	div.grid-row {
-		-moz-column-count:    1;
-		-webkit-column-count: 1;
-		column-count:         1;
 	}
 }
 // collections page
@@ -126,7 +119,7 @@ div.collection a{
 	text-align: center;
 }
 div.collection a:hover{
-	color: darkred;
+	color: #77212E; //darkred
 }
 //bio links
 img.me{
@@ -141,15 +134,15 @@ div.contact{
 	padding-left: 10px;
 	padding-right: 100px;
 	margin-bottom: 20px;
-	border-left: .7vw solid darkred;
+	border-left: .7vw solid #77212E;
 	font-size: 1.3vw;
 }
 div.contact a:hover{
-	color: darkred;
+	color: #77212E;
 	text-decoration: none;
 }
 a.inline:hover {
-	color: darkred;
+	color: #77212E;
 	text-decoration: none;
 }
 //footer navigation
@@ -170,13 +163,30 @@ a.footer:link, a.footer:visited {
 a.footer:hover, a.footer:active {
 	color: thistle;
 }
-//for mpbile
-@media only screen and (max-width: 720px) {
+// for small window
+@media screen and (max-width: 720px) {
+	div.grid-row {
+		-moz-column-count:    1;
+		-webkit-column-count: 1;
+		column-count:         1;
+	}
+	div.contact{
+		display: none;
+	}
+	img.me{
+		padding-right: 15px;
+		padding-bottom: 10px;
+		float: left;
+		width: 20%;
+	}
 	header img {
 		padding-top: 20px;
 		width: 100%;
 		padding-bottom: 20px;
 	}
+}
+//for mpbile
+@media only screen and (max-width: 720px) and (orientation : landscape){
 	div.collection div.image_text {
 		opacity: 1;
 	}
