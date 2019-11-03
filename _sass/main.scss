@@ -21,10 +21,10 @@ h1, h2, h3, h4, h5, p {
 }
 h1 {
 	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-bottom: 7px;
 	font-size: 3vw;
 	clear: both;
-	border-bottom: 0.3vw solid midnightblue;
+	border-bottom: 3px solid midnightblue;
 }
 p {
 	font-size: 1.3vw;
@@ -35,7 +35,7 @@ header {
 }
 header img {
 	padding-top: 20px;
-	width: 30%;
+	width: 40%;
 	padding-bottom: 20px;
 }
 header a{
@@ -65,13 +65,6 @@ div.grid-row img{
 	padding-bottom: 7px;
 	width: 100%;
 	height: auto;
-}
-@media screen and (max-width: 1300px) {
-	div.grid-row {
-		-moz-column-count:    2;
-		-webkit-column-count: 2;
-		column-count:         2;
-	}
 }
 // collections page
 div.collection {
@@ -148,11 +141,11 @@ a.inline:hover {
 //footer navigation
 footer {
 	font-weight: 700;
-	margin-top: 10px;
+	margin-top: 7px;
 	text-align: center;
 	font-size: 1.3vw;
 	clear: both;
-	border-top: 0.3vw solid midnightblue;
+	border-top: 3px solid midnightblue;
 	padding: 10px;
 }
 a.footer:link, a.footer:visited {
@@ -164,6 +157,13 @@ a.footer:hover, a.footer:active {
 	color: thistle;
 }
 // for small window
+@media screen and (max-width: 1300px) {
+	div.grid-row {
+		-moz-column-count:    2;
+		-webkit-column-count: 2;
+		column-count:         2;
+	}
+}
 @media screen and (max-width: 720px) {
 	div.grid-row {
 		-moz-column-count:    1;
@@ -185,7 +185,7 @@ a.footer:hover, a.footer:active {
 		padding-bottom: 20px;
 	}
 }
-//for mpbile
+//for mobile
 @media only screen and (max-width: 720px) and (orientation : landscape){
 	div.collection div.image_text {
 		opacity: 1;

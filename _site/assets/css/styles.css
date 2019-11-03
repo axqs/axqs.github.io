@@ -19,10 +19,10 @@ h1, h2, h3, h4, h5, p {
 
 h1 {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   font-size: 3vw;
   clear: both;
-  border-bottom: 0.3vw solid midnightblue; }
+  border-bottom: 3px solid midnightblue; }
 
 p {
   font-size: 1.3vw; }
@@ -32,7 +32,7 @@ header {
 
 header img {
   padding-top: 20px;
-  width: 30%;
+  width: 40%;
   padding-bottom: 20px; }
 
 header a {
@@ -62,11 +62,6 @@ div.grid-row img {
   width: 100%;
   height: auto; }
 
-@media screen and (max-width: 1300px) {
-  div.grid-row {
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    column-count: 2; } }
 div.collection {
   position: relative;
   text-align: center;
@@ -139,11 +134,11 @@ a.inline:hover {
 
 footer {
   font-weight: 700;
-  margin-top: 10px;
+  margin-top: 7px;
   text-align: center;
   font-size: 1.3vw;
   clear: both;
-  border-top: 0.3vw solid midnightblue;
+  border-top: 3px solid midnightblue;
   padding: 10px; }
 
 a.footer:link, a.footer:visited {
@@ -154,6 +149,11 @@ a.footer:link, a.footer:visited {
 a.footer:hover, a.footer:active {
   color: thistle; }
 
+@media screen and (max-width: 1300px) {
+  div.grid-row {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2; } }
 @media screen and (max-width: 720px) {
   div.grid-row {
     -moz-column-count: 1;
