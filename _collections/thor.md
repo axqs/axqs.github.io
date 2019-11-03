@@ -1,3 +1,4 @@
 ---
 name: thor
+title: thor
 ---

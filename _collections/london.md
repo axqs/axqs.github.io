@@ -1,3 +1,4 @@
 ---
 name: london
+title: london
 ---

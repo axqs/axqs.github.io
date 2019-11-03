@@ -1,3 +1,4 @@
 ---
 name: beach
+title: beach
 ---
