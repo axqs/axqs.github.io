@@ -160,14 +160,14 @@ a.footer:hover, a.footer:active {
     display: none;
 }
 // for small window
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1500px) {
 	div.grid-row {
 		-moz-column-count:    2;
 		-webkit-column-count: 2;
 		column-count:         2;
 	}
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1024px) {
 	body {
 		width: 87%;
 	}
@@ -204,7 +204,7 @@ a.footer:hover, a.footer:active {
 	}
 }
 //for mobile
-@media only screen and (max-device-width: 720px){
+@media only screen and (max-device-width: 1024px){
 	div.collection div.image_text {
 		opacity: 1;
 	}

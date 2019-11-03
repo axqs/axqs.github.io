@@ -152,12 +152,12 @@ a.footer:hover, a.footer:active {
 ::-webkit-scrollbar {
   display: none; }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1500px) {
   div.grid-row {
     -moz-column-count: 2;
     -webkit-column-count: 2;
     column-count: 2; } }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1024px) {
   body {
     width: 87%; }
 
@@ -191,7 +191,7 @@ a.footer:hover, a.footer:active {
     padding-top: 20px;
     width: 80%;
     padding-bottom: 20px; } }
-@media only screen and (max-device-width: 720px) {
+@media only screen and (max-device-width: 1024px) {
   div.collection div.image_text {
     opacity: 1; }
 
