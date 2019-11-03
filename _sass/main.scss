@@ -1,12 +1,12 @@
 //general
 html {
-	background-color: whitesmoke;
+	background-color: white;
 	width: 100%;
 }
 body {
 	font-family: 'Rajdhani', sans-serif;
 	color: black;
-	width: 80%;
+	width: 75%;
 	margin: auto;
 	letter-spacing: 0.15em;
 }
@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, p {
 	font-weight: 100;
 }
 h1 {
+	margin-top: 10px;
 	margin-bottom: 10px;
 	font-size: 3vw;
 	clear: both;
@@ -37,40 +38,27 @@ header img {
 	width: 30%;
 	padding-bottom: 20px;
 }
-@media (max-width: 320px) {
-	header img {
-		padding-top: 20px;
-		width: 100%;
-		padding-bottom: 20px;
-	}
-}
 header a{
 	font-size: 1.7vw;
 	transition: .4s ease;
 	text-align: center;
 	text-decoration: none;
-	margin: 0px 10px 0px 10px;
-	border: 1px hidden black;
+	margin: 0px 15px 0px 15px;
 }
 a.current {
-	border-style: solid;
-	padding: 0.5vw 2vw;
-}
-a.nav:link, a.nav:visited {
-	padding: 8px 3%;
+	color: darkred
 }
 a.nav:hover, a.nav:active {
-	background-color: black;
-	color: white;
+	color: darkgrey;
 }
 //photo grid
 div.grid-row{
 	line-height: 10px;
-	-webkit-column-count: 2;
+	-webkit-column-count: 3;
 	-webkit-column-gap:   7px;
-	-moz-column-count:    2;
+	-moz-column-count:    3;
 	-moz-column-gap:      7px;
-	column-count:         2;
+	column-count:         3;
 	column-gap:           7px;
 }
 div.grid-row img{
@@ -78,7 +66,14 @@ div.grid-row img{
 	width: 100%;
 	height: auto;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1300px) {
+	div.grid-row {
+		-moz-column-count:    2;
+		-webkit-column-count: 2;
+		column-count:         2;
+	}
+}
+@media screen and (max-width: 720px) {
 	div.grid-row {
 		-moz-column-count:    1;
 		-webkit-column-count: 1;
@@ -133,18 +128,10 @@ div.collection a{
 div.collection a:hover{
 	color: darkred;
 }
-@media (max-width: 320px) {
-	div.collection div.image_text {
-		opacity: 1;
-	}
-	div.collection img.header{
-		opacity: 0.7;
-	}
-}
 //bio links
 img.me{
 	padding-right: 15px;
-	padding-bottom: 15px;
+	padding-bottom: 10px;
 	float: left;
 	width: 50%;
 }
@@ -152,7 +139,7 @@ div.contact{
 	float: right;
 	margin-left: 20px;
 	padding-left: 10px;
-	padding-right: 130px;
+	padding-right: 100px;
 	margin-bottom: 20px;
 	border-left: .7vw solid darkred;
 	font-size: 1.3vw;
@@ -182,4 +169,18 @@ a.footer:link, a.footer:visited {
 }
 a.footer:hover, a.footer:active {
 	color: thistle;
+}
+//for mpbile
+@media only screen and (max-width: 720px) {
+	header img {
+		padding-top: 20px;
+		width: 100%;
+		padding-bottom: 20px;
+	}
+	div.collection div.image_text {
+		opacity: 1;
+	}
+	div.collection img.header{
+		opacity: 0.7;
+	}
 }
