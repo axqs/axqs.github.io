@@ -116,6 +116,7 @@ div.collection a:hover{
 }
 //bio links
 img.me{
+	display: block;
 	padding-right: 15px;
 	padding-bottom: 10px;
 	float: left;
@@ -181,22 +182,30 @@ a.footer:hover, a.footer:active {
 	footer{
 		font-size: 2.5vw;
 	}
+	p {
+		font-size: 2vw;
+	}
 	div.grid-row {
 		-moz-column-count:    1;
 		-webkit-column-count: 1;
 		column-count:         1;
 	}
 	div.collection a{
-		font-size: 3.5vw;
+		font-size: 4vw;
 	}
 	div.contact{
 		display: none;
 	}
+	div.phone{
+		clear: both;
+	}
 	img.me{
-		padding-right: 15px;
-		padding-bottom: 10px;
-		float: left;
-		width: 20%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding-right: 0px;
+		float: none;
+		width: 50%;
 	}
 	header img {
 		padding-top: 20px;
