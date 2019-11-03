@@ -8,7 +8,6 @@ title: Collections
 		{{ c.name }}/header
 	{% endcapture %}
 	{% assign photopath = photopath | strip %}
-	<div class="grid-img">
 	<div class="collection">
 		{% for image in site.static_files %}
 			{% if image.path contains photopath %}
@@ -18,6 +17,5 @@ title: Collections
 		<div class="image_text">
 			<a href="{{ c.url }}">{{ c.name | upcase }}</a>
 		</div>
-	</div>
 	</div>
 {% endfor %}
