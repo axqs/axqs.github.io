@@ -1,5 +1,7 @@
 markdown: kramdown
 highlighter: rouge
+sass:
+  style: compressed
 kramdown:
   input: GFM
   syntax_highlighter: rouge
