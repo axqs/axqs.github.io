@@ -1,6 +1,6 @@
 - name: portfolio
   link: /
-- name: bio
-  link: /about.html
+#- name: bio
+#  link: /about.html
 - name: collections
   link: /collections.html
