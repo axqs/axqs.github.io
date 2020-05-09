@@ -8,16 +8,18 @@ body {
 	color: black;
 	width: 75%;
 	margin: auto;
-	letter-spacing: 0.15em;
+	
 }
 a {
 	color: black;
+	letter-spacing: 0.1em;
 }
 //general text
 h1, h2, h3, h4, h5, p {
 	padding: 0px;
 	margin: 0px;
-	font-weight: 100;
+	font-weight: 300;
+	letter-spacing: 0.1em;
 }
 h1 {
 	margin-top: 10px;
@@ -27,7 +29,8 @@ h1 {
 	border-bottom: 3px solid midnightblue;
 }
 p {
-	font-size: 1.3vw;
+	font-size: 1.5vh;
+	letter-spacing: 0.1em;
 }
 //header
 header {
@@ -39,8 +42,8 @@ header img {
 	padding-bottom: 20px;
 }
 header a{
-	font-size: 1.9vw;
-	transition: .4s ease;
+	font-size: 2vh;
+	transition: .2s ease;
 	text-align: center;
 	text-decoration: none;
 	margin: 0px 15px 0px 15px;
@@ -91,7 +94,7 @@ div.image_text{
 	height: 100%;
 	width: 100%;
 	opacity: 0;
-	transition: .4s ease;
+	transition: .3s ease;
 }
 div.collection:hover div.image_text {
 	opacity: 1;
@@ -120,16 +123,16 @@ img.me{
 	padding-right: 15px;
 	padding-bottom: 10px;
 	float: left;
-	width: 50%;
+	width: 35%;
 }
 div.contact{
 	float: right;
 	margin-left: 20px;
 	padding-left: 10px;
-	padding-right: 100px;
-	margin-bottom: 20px;
-	border-left: .7vw solid #77212E;
-	font-size: 1.3vw;
+	padding-right: 10px;
+	margin-bottom: 10px;
+	border-left: 7px solid #77212E;
+	font-size: 1.5vh;
 }
 div.contact a:hover{
 	color: #77212E;
@@ -139,6 +142,53 @@ a.inline:hover {
 	color: #77212E;
 	text-decoration: none;
 }
+// table stuff
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td {
+	font-size: 22px;
+	vertical-align: top;
+}
+
+td p a{
+	color: #77212E;
+}
+td p a:hover{
+	color: #77212E;
+	text-decoration: none;
+}
+
+td h1{
+	width: 30%;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	font-size: 35px;
+	clear: none;
+	border-bottom: 0px;
+}
+
+td.title {
+	width: 15%;
+	padding-top: 7px;
+	padding-bottom: 10px;
+	border-top: 3px solid #77212E;
+}
+
+td.resume-info {
+	width: 70%;
+	padding-top: 7px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	border-top: 3px solid white;
+}
+
+table.resume-info {
+	color: #77212E;
+}
+
 //footer navigation
 footer {
 	font-weight: 700;
@@ -162,7 +212,7 @@ a.footer:hover, a.footer:active {
     display: none;
 }
 // for small window
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1200px) {
 	div.grid-row {
 		-moz-column-count:    2;
 		-webkit-column-count: 2;
@@ -171,18 +221,15 @@ a.footer:hover, a.footer:active {
 }
 @media screen and (max-width: 1024px) {
 	body {
-		width: 87%;
+		width: 85%;
 	}
 	header a{
-		font-size: 2.5vw;
+		font-size: 2.25vw;
 	}
 	h1{
 		font-size: 3vw;
 	}
 	footer{
-		font-size: 2.5vw;
-	}
-	p {
 		font-size: 2vw;
 	}
 	div.grid-row {
@@ -193,28 +240,14 @@ a.footer:hover, a.footer:active {
 	div.collection a{
 		font-size: 4vw;
 	}
-	div.contact{
-		display: none;
-	}
-	div.phone{
-		clear: both;
-	}
-	img.me{
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		padding-right: 0px;
-		float: none;
-		width: 50%;
-	}
 	header img {
 		padding-top: 20px;
-		width: 80%;
+		width: 60%;
 		padding-bottom: 20px;
 	}
 }
 //for mobile
-@media only screen and (max-device-width: 1700px){
+@media only screen and (max-device-width: 1200px){
 	div.collection div.image_text {
 		opacity: 1;
 	}
